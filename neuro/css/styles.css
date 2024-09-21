@@ -195,7 +195,7 @@ body::before {
     width: 300px;
     margin: 0 auto;
     padding: 20px;
-    background-color: #f3f3f3;
+    background-color: #2b2a3b;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     border-radius: 5px;
     margin-top: 100px;
@@ -203,7 +203,7 @@ body::before {
 }
 
 .login-container h2 {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 .login-container label {
@@ -222,9 +222,9 @@ body::before {
 
 .login-container button {
     padding: 10px 20px;
-    background-color: #6a0dad;
+    background-color: #68428325;
     color: white;
-    border: none;
+    border:#d0eee5;
     border-radius: 5px;
     cursor: pointer;
 }
