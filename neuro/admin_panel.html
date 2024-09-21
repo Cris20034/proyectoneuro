@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Administración</title>
+    <link rel="stylesheet" href="css/styles.css"> <!-- Usa tu hoja de estilos -->
+</head>
+<body>
+    <header>
+        <h1>Bienvenido al Panel de Administración</h1>
+        <button id="logoutBtn">Cerrar Sesión</button>
+    </header>
+
+    <main>
+        <h2>Gestiona tu contenido aquí</h2>
+        <!-- Contenido del panel -->
+    </main>
+
+    <script>
+        // Verificar si el usuario está autenticado
+        if (localStorage.getItem('isAuthenticated') !== 'true') {
+            // Si no está autenticado, redirigir al login
+            window.location.href = 'login.html';
+        }
+
+        // Cerrar sesión
+        document.getElementById('logoutBtn').addEventListener('click', function() {
+            localStorage.removeItem('isAuthenticated'); // Eliminar autenticación
+            window.location.href = 'login.html'; // Redirigir al login
+        });
+    </script>
+</body>
+</html>
