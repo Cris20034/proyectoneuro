@@ -13,7 +13,6 @@ var connection = mysql.createConnection({
 });
 
 // Verificar la conexión a la base de datos
-//connection.connect(function (error) {
 connection.connect(function (error) {
     if (error) throw error;
     console.log('Conexión exitosa a la base de datos');
