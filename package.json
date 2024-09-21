@@ -1,7 +1,7 @@
 {
   "name": "proyectoneuro",
   "version": "1.0.0",
-  "description": "",
+  "description": "El proyecto está destinado a realizar citas de Neuro",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
