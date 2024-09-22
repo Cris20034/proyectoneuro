@@ -16,7 +16,7 @@ app.use("/assets", express.static(__dirname + '/assets'));
 var connection = mysql.createConnection({
     host: 'localhost',
     user: 'root',
-    password: '12345678910',
+    password: 'root',
     database: 'db_n'
 });
 
@@ -27,7 +27,6 @@ connection.connect(function (error) {
 });
 
 // Ruta para el inicio de sesión
-
 
 //app.post('/login', function (req, res) {
   //  var user = req.body.user;
