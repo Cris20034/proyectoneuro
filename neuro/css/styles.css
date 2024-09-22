@@ -242,26 +242,6 @@ body::before {
     .detalles #calendar {
         width: 100%;
     }
-<<<<<<< HEAD
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 /* Asegúrate de que el contenedor de todas las tarjetas use flexbox */
@@ -391,23 +371,6 @@ body::before {
     border-color: #4CAF50;
     box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
   }
-  
-  
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-=======
     .container {
         display: flex;
         justify-content: space-around;
@@ -437,7 +400,7 @@ body::before {
     .card img {
         width: 100%;
     }
->>>>>>> c4d6c380f37e53d63db26a401b2945eb78d49511
+
 }
 /* about*/
 
