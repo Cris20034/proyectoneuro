@@ -16,7 +16,7 @@ app.use("/assets", express.static(__dirname + '/assets'));
 var connection = mysql.createConnection({
     host: 'localhost',
     user: 'root',
-    password: 'root',
+    password: '12345678910',
     database: 'db_n'
 });
 

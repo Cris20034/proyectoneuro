@@ -1,12 +1,12 @@
 /* Importar la fuente Bebas Neue */
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@300&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 
 /* Aplicar la fuente Bebas Neue en toda la página */
 body {
     margin: 0;
     background-color: #d0eee5;
-    font-family: 'Bebas Neue', sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 /* Estilo para el header con cabecera transparente */
@@ -28,7 +28,7 @@ nav {
 
 /* Estilo para el logo */
 .logo img {
-    width: 125px;
+    width: 100px;
 }
 
 /* Estilo para los enlaces del menú */
@@ -45,15 +45,15 @@ nav {
 .nav-links a {
     text-decoration: none;
     color: white;
-    font-size: 18px;
+    font-size: 14px;
     font-weight: 500;
     transition: color 0.3s;
-    font-family: 'Lexend Deca', sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 /* Letras de las tablas que no se degrade */
 .nav-links a:hover {
-    color: #000000;
+    color: #28a5df;
 }
 
 /* Estilos para el menú desplegable */
@@ -69,7 +69,7 @@ nav {
     border: none;
     cursor: pointer;
     font-weight: 500;
-    font-family: 'Lexend Deca', sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 /* Menú desplegable */
@@ -89,8 +89,8 @@ nav {
     padding: 12px 16px;
     text-decoration: none;
     display: block;
-    font-size: 15px;
-    font-family: 'Lexend Deca', sans-serif;
+    font-size: 10px;
+    font-family: 'Poppins', sans-serif;
 }
 
 .dropdown-content a:hover {
@@ -122,17 +122,17 @@ nav {
 }
 
 .hero-text h1 {
-    font-size: 50px;
+    font-size: 30px;
     font-weight: bold;
     margin: 0;
-    font-family: 'Lexend Deca', sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 .hero-text h2 {
     font-size: 36px;
     font-weight: normal;
     margin-top: 10px;
-    font-family: 'Lexend Deca', sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 /* Botón agenda tu cita */
@@ -145,9 +145,9 @@ nav {
     text-decoration: none;
     box-shadow: 0 8px 16px #000000;
     border-radius: 5px;
-    font-size: 18px;
+    font-size: 10px;
     transition: background-color 0.3s;
-    font-family: 'Lexend Deca', sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 .cta-btn:hover {
@@ -162,18 +162,18 @@ nav {
 }
 
 .services h2 {
-    font-size: 36px;
+    font-size: 30px;
     color: #333;
-    font-family: 'Lexend Deca', sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 /* Footer */
 footer {
-    padding: 20px;
+    padding: 15px;
     text-align: center;
     background-color: #333;
     color: rgb(255, 255, 255);
-    font-family: 'Lexend Deca', sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 body::before {
@@ -188,45 +188,6 @@ body::before {
     background-position: center;
     z-index: -1;
     clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 100%, 0 80%);
-}
-
-/* Estilos del contenedor de login */
-.login-container {
-    width: 300px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #2b2a3b;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
-    margin-top: 100px;
-    text-align: center;
-}
-
-.login-container h2 {
-    margin-bottom: 30px;
-}
-
-.login-container label {
-    display: block;
-    margin: 10px 0 5px;
-    font-weight: bold;
-}
-
-.login-container input {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-.login-container button {
-    padding: 10px 20px;
-    background-color: #68428325;
-    color: white;
-    border:#d0eee5;
-    border-radius: 5px;
-    cursor: pointer;
 }
 
 /* Menú Responsive */
@@ -281,4 +242,232 @@ body::before {
     .detalles #calendar {
         width: 100%;
     }
+<<<<<<< HEAD
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Asegúrate de que el contenedor de todas las tarjetas use flexbox */
+.card-container {
+    display: flex;
+    flex-wrap: wrap; /* Permite que las tarjetas se ajusten en filas */
+    justify-content: space-around; /* Distribuye las tarjetas uniformemente */
+    gap: 20px; /* Espaciado entre tarjetas */
+  }
+  
+  /* Asegúrate de que cada tarjeta tenga un ancho adecuado */
+  .card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100px; /* Ancho fijo o ajustable */
+    max-width: 100%;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Para que la imagen no desborde */
+  }
+  
+  .card img {
+    width: 10%; /* Controla el tamaño de la imagen */
+    height: auto;
+    object-fit: cover; /* Asegura que la imagen se ajuste */
+  }
+
+  .card img {
+    width: 10%; /* Controla el tamaño de la imagen */
+    height: auto;
+    object-fit: cover; /* Asegura que la imagen se ajuste */
+  }
+  
+  .card-body {
+    width: 60%;
+    padding: 20px;
+  }
+  
+/* Estilo general del Datepicker */
+.ui-datepicker {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* Encabezado del calendario (mes y año) */
+  .ui-datepicker-header {
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 8px 8px 0 0;
+    padding: 8px;
+  }
+  
+  /* Flechas de navegación (mes siguiente y anterior) */
+  .ui-datepicker-prev, .ui-datepicker-next {
+    color: white;
+    font-weight: bold;
+    padding: 5px;
+  }
+  
+  /* Texto del día */
+  .ui-datepicker-title {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+  }
+  
+  /* Celdas de días */
+  .ui-datepicker-calendar td {
+    text-align: center;
+    padding: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Días de la semana */
+  .ui-datepicker-calendar th {
+    padding: 10px;
+    color: #4CAF50;
+    font-weight: bold;
+  }
+  
+  /* Efecto hover para los días */
+  .ui-datepicker-calendar td:hover {
+    background-color: #f1f1f1;
+    border-radius: 50%;
+  }
+  
+  /* Días seleccionados */
+  .ui-state-active {
+    background-color: #4CAF50 !important;
+    color: white !important;
+    border-radius: 50%;
+  }
+  
+  /* Botones de cambio de mes */
+  .ui-datepicker-prev:hover, .ui-datepicker-next:hover {
+    background-color: #45a049;
+    border-radius: 50%;
+  }
+  
+  /* Días deshabilitados (pasados) */
+  .ui-datepicker-unselectable .ui-state-disabled {
+    color: #ccc;
+    pointer-events: none;
+  }
+
+  /* Estilo para los campos de entrada del datepicker */
+.datepicker {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-size: 1em;
+    transition: border-color 0.3s ease;
+  }
+  
+  .datepicker:focus {
+    outline: none;
+    border-color: #4CAF50;
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+  }
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+=======
+    .container {
+        display: flex;
+        justify-content: space-around;
+    }
+    
+    .image-container {
+        position: relative;
+        width: 300px;
+    }
+    
+    .image-container img {
+        width: 100%;
+        height: auto;
+    }
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+      }
+      
+    .card {
+        position: relative;
+        width: 30%;
+        text-align: center;
+    }
+    
+    .card img {
+        width: 100%;
+    }
+>>>>>>> c4d6c380f37e53d63db26a401b2945eb78d49511
 }
+/* about*/
+
+.about{
+    text-align: center;
+}
+.subtitle{
+    color: var(#000000);
+    font-size: 2rem;
+    margin-bottom: 25px;
+}
+
+.about_paragraph{
+    line-height: 1.7;
+}
+.about__main{
+    padding-top: 80px;
+    display: grid;
+    width: 90%;
+    margin: 0 auto;
+    gap: 1em;
+    overflow: hidden;
+}
+
+.about__icons{
+    display: grid;
+    gap: 1em;
+    justify-items: center;
+    width: 200px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
