@@ -1,11 +1,15 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Servicios - Neurovida</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="shortcut icon" href="images/favicon-32x32.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 </head>
 <body>
     <header>
@@ -38,62 +42,155 @@
         </nav>
       </header>
     
-      <!-- Sección Hero -->
       <section class="hero">
         <div class="hero-text">
           <h1>Nuestros Servicios</h1>
           <h2>Neurovida</h2>
         </div>
-       </section>
-   
-        <main>
-        <h1>Nuestros Servicios</h1>
-        <section id="yoga">
-            <h2>Yoga</h2>
-            <p>Descripción del servicio de yoga.</p>
-        </section>
-        <section id="bailoterapia">
-            <h2>Bailoterapia</h2>
-            <p>Descripción del servicio de bailoterapia.</p>
-        </section>
-        <section id="masajes">
-            <h2>Masajes Relajantes</h2>
-            <p>Descripción del servicio de masajes relajantes.</p>
-        </section>
-        <section id="gimnasia">
-            <h2>Gimnasia Cerebral</h2>
-            <p>Descripción del servicio de gimnasia cerebral.</p>
-        </section>
-        <section id="tareas">
-            <h2>Tareas Dirigidas</h2>
-            <p>Descripción del servicio de tareas dirigidas.</p>
-        </section>
-        <section id="cursos">
-            <h2>Cursos de Computación</h2>
-            <p>Descripción del servicio de cursos de computación.</p>
-        </section>
-        <section id="manualidades">
-            <h2>Manualidades</h2>
-            <p>Descripción del servicio de manualidades.</p>
-        </section>
+      </section>
+
+      <main>
+        <h1><center>Nuestros Servicios</center></h1>
+
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4">
+              <div class="card" style="width: 18rem;">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlTwSBWeY4uulfTxxvfenU_9hkhoBGXdF0dw&s" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Yoga</h5>
+                  <p class="card-text">Selecciona una fecha para agendar tu clase de Yoga.</p>
+                  <input type="text" id="datepicker-yoga" class="datepicker" placeholder="Selecciona fecha">
+                  <h6>Horarios Disponibles:</h6>
+                  <ul>
+                    <li>10:00 AM - 11:00 AM</li>
+                    <li>12:00 PM - 1:00 PM</li>
+                  </ul>
+                  <h6>Horarios No Disponibles:</h6>
+                  <ul>
+                    <li>2:00 PM - 3:00 PM</li>
+                    <li>4:00 PM - 5:00 PM</li>
+                  </ul>
+                  <a href="#" class="btn btn-primary agendar-cita" data-service="yoga">Agendar Cita</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="card" style="width: 18rem;">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlTwSBWeY4uulfTxxvfenU_9hkhoBGXdF0dw&s" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Meditación</h5>
+                  <p class="card-text">Selecciona una fecha para agendar tu clase de Meditación.</p>
+                  <input type="text" id="datepicker-meditacion" class="datepicker" placeholder="Selecciona fecha">
+                  <h6>Horarios Disponibles:</h6>
+                  <ul>
+                    <li>3:00 PM - 4:00 PM</li>
+                    <li>5:00 PM - 6:00 PM</li>
+                  </ul>
+                  <h6>Horarios No Disponibles:</h6>
+                  <ul>
+                    <li>1:00 PM - 2:00 PM</li>
+                    <li>7:00 PM - 8:00 PM</li>
+                  </ul>
+                  <a href="#" class="btn btn-primary agendar-cita" data-service="meditacion">Agendar Cita</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="card" style="width: 18rem;">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlTwSBWeY4uulfTxxvfenU_9hkhoBGXdF0dw&s" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Masajes</h5>
+                  <p class="card-text">Selecciona una fecha para agendar tu sesión de Masajes.</p>
+                  <input type="text" id="datepicker-masajes" class="datepicker" placeholder="Selecciona fecha">
+                  <h6>Horarios Disponibles:</h6>
+                  <ul>
+                    <li>1:00 PM - 2:00 PM</li>
+                    <li>3:00 PM - 4:00 PM</li>
+                  </ul>
+                  <h6>Horarios No Disponibles:</h6>
+                  <ul>
+                    <li>9:00 AM - 10:00 AM</li>
+                    <li>11:00 AM - 12:00 PM</li>
+                  </ul>
+                  <a href="#" class="btn btn-primary agendar-cita" data-service="masajes">Agendar Cita</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+          <div class="col-md-4">
+            <div class="card" style="width: 18rem;">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlTwSBWeY4uulfTxxvfenU_9hkhoBGXdF0dw&s" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Masajes</h5>
+                <p class="card-text">Selecciona una fecha para agendar tu sesión de Masajes.</p>
+                <input type="text" id="datepicker-masajes" class="datepicker" placeholder="Selecciona fecha">
+                <h6>Horarios Disponibles:</h6>
+                <ul>
+                  <li>1:00 PM - 2:00 PM</li>
+                  <li>3:00 PM - 4:00 PM</li>
+                </ul>
+                <h6>Horarios No Disponibles:</h6>
+                <ul>
+                  <li>9:00 AM - 10:00 AM</li>
+                  <li>11:00 AM - 12:00 PM</li>
+                </ul>
+                <a href="#" class="btn btn-primary agendar-cita" data-service="masajes">Agendar Cita</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <footer>
+            <script type="text/javascript">
+                (function(d, t) {
+                    var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
+                    v.onload = function() {
+                      window.voiceflow.chat.load({
+                        verify: { projectID: '66e506cf92f43d1a82362e08' },
+                        url: 'https://general-runtime.voiceflow.com',
+                        versionID: 'production'
+                      });
+                    }
+                    v.src = "https://cdn.voiceflow.com/widget/bundle.mjs"; v.type = "text/javascript"; s.parentNode.insertBefore(v, s);
+                })(document, 'script');
+            </script>
+            <p>&copy; 2024 Neurovida</p>
+        </footer>
+
+        <script>
+          $(document).ready(function() {
+            // Inicializa los datepickers
+            $(".datepicker").datepicker({
+              dateFormat: "dd-mm-yy",
+              minDate: 0, // No permite seleccionar fechas pasadas
+              onSelect: function(dateText, inst) {
+                alert("Has seleccionado: " + dateText);
+              }
+            });
+        
+            // Manejador para el botón Agendar Cita
+            $(".agendar-cita").click(function(e) {
+              e.preventDefault();
+              var service = $(this).data('service');
+              var datepickerId = "#datepicker-" + service;
+              var selectedDate = $(datepickerId).val();
+              
+              if (selectedDate) {
+                alert("Cita agendada para " + service + " el " + selectedDate);
+                // Aquí puedes redirigir a un sistema de citas o hacer una solicitud a un backend
+              } else {
+                alert("Por favor, selecciona una fecha para " + service);
+              }
+            });
+          });
+        </script>
     </main>
-
-
-    <footer>
-        <script type="text/javascript">
-            (function(d, t) {
-                var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
-                v.onload = function() {
-                  window.voiceflow.chat.load({
-                    verify: { projectID: '66e506cf92f43d1a82362e08' },
-                    url: 'https://general-runtime.voiceflow.com',
-                    versionID: 'production'
-                  });
-                }
-                v.src = "https://cdn.voiceflow.com/widget/bundle.mjs"; v.type = "text/javascript"; s.parentNode.insertBefore(v, s);
-            })(document, 'script');
-          </script>
-        <p>&copy; 2024 Neurovida</p>
-    </footer>
 </body>
 </html>
+
