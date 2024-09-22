@@ -155,7 +155,7 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `DB_N`.`Contraseña` (
   `idContraseña` INT NOT NULL AUTO_INCREMENT,
-  `Password` VARCHAR(45) NULL,
+  `Password` VARCHAR(255) NULL,
   PRIMARY KEY (`idContraseña`))
 ENGINE = InnoDB;
 
@@ -174,6 +174,10 @@ CREATE TABLE IF NOT EXISTS `DB_N`.`Administrador` (
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
+
+
+INSERT INTO `DB_N`.`Administrador` (`IdAdmin`, `UserAdmin`, `Contraseña_idContraseña`) VALUES (1, 'Juanito', '1');
+INSERT INTO `DB_N`.`Contraseña` (`idContraseña`, `Password`) VALUES (1, '1234');
 
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
