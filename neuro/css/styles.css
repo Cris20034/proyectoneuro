@@ -100,14 +100,14 @@ nav {
 /* Botón agenda tu cita */
 .cta-btn {
     display: inline-block;
-    margin-top: 20px;
+    margin-top: 30px;
     padding: 12px 30px;
     background: linear-gradient(to bottom right, #87cfeb, #6a0dad);
     color: rgb(0, 0, 0);
     text-decoration: none;
     box-shadow: 0 8px 16px #000000;
     border-radius: 5px;
-    font-size: 10px;
+    font-size: 15px;
     transition: background-color 0.3s;
 }
 
@@ -279,7 +279,7 @@ body::before {
     margin: 0 auto;
 }
 
-<<<<<<< HEAD
+
 /* Sección de contacto */
 .contact-section {
     display: flex;
@@ -367,7 +367,7 @@ body::before {
         width: 100%;
         padding: 20px;
     }
-=======
+}
 /* Estilos del calendario */
 #calendar {
     max-width: 900px;
@@ -498,6 +498,5 @@ footer {
     font-size: 16px;
     color: #333;
     margin-top: 10px;
->>>>>>> 1dce04af91964859c2be5923552042dbaa017fb6
-}
 
+}
