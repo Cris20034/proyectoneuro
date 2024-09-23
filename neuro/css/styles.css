@@ -288,3 +288,93 @@ body::before {
     overflow: hidden;
     margin: 0 auto;
 }
+
+/* Sección de contacto */
+.contact-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contact-left {
+    background: url('https://apliklo.com/wp-content/uploads/2019/05/Contáctanos.jpg') no-repeat center center;
+    background-size: cover;
+    padding: 40px;
+    width: 50%;
+    color: #ffffff;
+}
+
+.contact-left h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.contact-left p {
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+.contact-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #18b7cc;
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.contact-btn:hover {
+    background-color: #dc6eeb;
+}
+
+.contact-right {
+    background-color: #305b94;
+    padding: 40px;
+    width: 40%;
+    color: #fff;
+}
+
+.contact-right h3 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.contact-info ul {
+    list-style: none;
+    padding: 0;
+}
+
+.contact-info ul li {
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+.contact-info ul li span {
+    font-weight: bold;
+}
+
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 768px) {
+    .contact-section {
+        flex-direction: column;
+    }
+
+    .contact-left, .contact-right {
+        width: 100%;
+        padding: 20px;
+    }
+}
+
