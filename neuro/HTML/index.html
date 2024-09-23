@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Neurovida</title>
-
     <!-- Importar la hoja de estilos externa -->
     <link rel="stylesheet" href="../css/styles.css">
     <!-- Iconos para el menú y redes sociales -->
@@ -13,24 +12,22 @@
 <body>
     <!-- Header y menú de navegación -->
     <header>
-        <nav>
-            <div class="logo">
-                <img src="../images/logoneurovida.png" alt="Neurovida Logo">
-            </div>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="servicios.html">Servicios</a></li>
-                <li><a href="citas.html">Agenta tu cita </a></li>
-                <li><a href="quienes_somos.html">¿Quienes somos?</a></li>
-            </ul>
-            <div class="social-icons">
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-            </div>
-            <div class="menu-icon">
-                <i class="fas fa-bars"></i>
-            </div>
-        </nav>
+      <nav>
+        <div class="logo">
+          <img src="../images/logoneurovida.png" alt="Neurovida Logo" href="index.html">
+        </div>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="quienes_somos.html">¿Quiénes somos?</a></li>
+          <li><a href="servicios.html">servicios</a></li>
+          <li><a href="citas.html">Agenda tu cita</a></li>
+        </ul>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </nav>
     </header>
 
     <!-- Hero Section -->
@@ -77,38 +74,39 @@
 
     <!-- Sección de Contacto -->
     <section id="contact" class="contact-section">
-      <div class="contact-container">
-          <!-- Lado izquierdo con imagen y mensaje -->
-          <div class="contact-left">
-              <h2>Contactanos</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam lectus erat, consectetur eu sapien eget, rhoncus consectetur sem.</p>
-              <a href="#" class="contact-btn">whatsapp</a>
-          </div>
-          
-          <!-- Lado derecho con información de contacto -->
-          <div class="contact-right">
-              <div class="contact-info">
-                  <h3>Informacion de contacto</h3>
-                  <ul>
-                      <li>
-                          <span>Nuestras oficinas :</span> <br>
-                          1234 Dhote St #100, San Francisco, CA 90251
-                      </li>
-                      <li>
-                          <span>Horarios de atencion: </span> <br>
-                          Mon-Fri: 8am - 6pm <br>
-                          Sat: 10am - 4pm
-                      </li>
-                      <li>
-                          <span>Ponte en contacto:</span> <br>
-                          hello@site.com <br>
-                          (949) 426-2301
-                      </li>
-                  </ul>
-              </div>
-          </div>
-      </div>
-  </section>
+        <div class="contact-container">
+            <!-- Lado izquierdo con imagen y mensaje -->
+            <div class="contact-left">
+                <h2>Contactanos</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam lectus erat, consectetur eu sapien eget, rhoncus consectetur sem.</p>
+                <a href="#" class="contact-btn">WhatsApp</a>
+            </div>
+            
+            <!-- Lado derecho con información de contacto -->
+            <div class="contact-right">
+                <div class="contact-info">
+                    <h3>Información de contacto</h3>
+                    <ul>
+                        <li>
+                            <span>Nuestras oficinas:</span> <br>
+                            1234 Dhote St #100, San Francisco, CA 90251
+                        </li>
+                        <li>
+                            <span>Horarios de atención:</span> <br>
+                            Lunes - Viernes: 8am - 6pm <br>
+                            Sábado: 10am - 4pm
+                        </li>
+                        <li>
+                            <span>Ponte en contacto:</span> <br>
+                            hello@site.com <br>
+                            (949) 426-2301
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Sección About -->
     <section class="about">
         <h2 class="subtitle">Sobre Nosotros</h2>
@@ -121,5 +119,15 @@
     <footer>
         <p>&copy; 2024 Neurovida. Todos los derechos reservados.</p>
     </footer>
+
+    <!-- Agregar la funcionalidad del menú hamburguesa -->
+    <script>
+        const menuIcon = document.querySelector('.menu-icon');
+        const navLinks = document.querySelector('.nav-links');
+
+        menuIcon.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    </script>
 </body>
 </html>
