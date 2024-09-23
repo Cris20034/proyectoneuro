@@ -1,20 +1,16 @@
-exports.succeed = function (req, res, mensaje, status) {
-    const statusCode = status || 200;
-    const mensajeOk = mensaje || '';
-    res.status(statusCode).send({
+exports.succeed = function (req, res, mensaje ='', status = 200) {
+    res.status(status).send({
         error: false,
-        status: statusCode,
-        body: mensajeOk
+        status: status,
+        body: mensaje
     });
 }
 
+exports.error = function (req, res, mensaje ='Error interno', status = 500) {
 
-exports.error = function (req, res, mensaje, status) {
-    const statusCode = status || 500;
-    const mensajeError = mensaje || 'Error interno';
-    res.status(statusCode).send({
+    res.status(status).send({
         error: true,
-        status: statusCode,
-        body: mensajeError
+        status: status,
+        body: mensaje
     });
 }
