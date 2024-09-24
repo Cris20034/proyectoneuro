@@ -25,6 +25,7 @@
         background-position: center bottom;
         background-repeat: no-repeat;
         background-size: cover;
+        background-attachment: fixed;
         min-height: 70vh;
         display: flex;
         align-items: center;
@@ -102,7 +103,7 @@
 
 .frase{
     padding: 90px 0;
-    background-color: #e6e2e2;
+    background-color: #cccece;
     position: relative;
 }
 .frase-content{
