@@ -53,10 +53,7 @@ nav {
 }
 
 /* Estilos para el menú desplegable */
-.dropdown {
-    position: relative;
-    display: inline-block;
-}
+
 
 .dropbtn {
     background-color: transparent;
@@ -76,7 +73,7 @@ nav {
 
 /* Hero section (Sección principal con imagen de fondo) */
 .hero {
-    background-size: cover;
+    background-size: center;
     background-position: center;
     height: 100vh;
     display: flex;
@@ -96,6 +93,7 @@ nav {
     font-size: 36px;
     font-weight: normal;
     margin-top: 10px;
+    color: #000000;
 }
 
 /* Botón agenda tu cita */
@@ -187,7 +185,7 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url(https://consulting.4doctors.io/wp-content/uploads/2023/06/ia-marketing.jpg?_gl=1*1pcx3uz*_up*MQ..*_ga*MzQwMzEyNzMyLjE3MjY4Nzg1ODA.*_ga_L0XYHB8ESM*MTcyNjg3ODU3OS4xLjAuM);
+    background-image: url(../images/imagen\ portada.jpg);
     background-size: cover;
     background-position: center;
     z-index: -1;
