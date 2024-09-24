@@ -1,16 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Neurovida</title>
-    <!-- Importar la hoja de estilos externa -->
-    <link rel="stylesheet" href="../css/styles.css">
-    <!-- Iconos para el menú y redes sociales -->
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+   
 </head>
 <body>
     <!-- Header y menú de navegación -->
@@ -24,16 +15,9 @@
           <li><a href="quienes_somos.html">¿Quiénes somos?</a></li>
           <li><a href="servicios.html">servicios</a></li>
           <li><a href="citas.html">Agenda tu cita</a></li>
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
-            <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
-          </svg>
-        </ul>
-        <div class="social-icons">
-          <a href="#"><i class="fab fa-facebook"></i></a>
-          <a href="#"><i class="fab fa-instagram"></i></a>
-          <a href="#"><i class="fab fa-whatsapp"></i></a>
-        </div>
-      </nav>
+            <!-- Menú hamburguesa -->
+            
+        </nav>
     </header>
 
     <!-- Hero Section -->
@@ -125,9 +109,18 @@
     <footer>
         <p>&copy; 2024 Neurovida. Todos los derechos reservados.</p>
     </footer>
-
-    <!-- Agregar la funcionalidad del menú hamburguesa -->
     <script>
+        // Cambiar el tamaño del menú de navegación al hacer scroll
+        window.onscroll = function() {
+            var nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('small');
+            } else {
+                nav.classList.remove('small');
+            }
+        };
+
+        // Mostrar/ocultar el menú hamburguesa
         const menuIcon = document.querySelector('.menu-icon');
         const navLinks = document.querySelector('.nav-links');
 
@@ -135,5 +128,6 @@
             navLinks.classList.toggle('active');
         });
     </script>
+
 </body>
 </html>

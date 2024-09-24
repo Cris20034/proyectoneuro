@@ -57,3 +57,24 @@ function prevMonth() {
 }
 
 showCalendar(currentMonth, currentYear);
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Cambiar el tamaño del menú de navegación al hacer scroll
+    window.onscroll = function() {
+        var nav = document.querySelector('nav');
+        if (window.scrollY > 50) {
+            nav.classList.add('small');
+        } else {
+            nav.classList.remove('small');
+        }
+    };
+
+    // Mostrar/ocultar el menú hamburguesa
+    const menuIcon = document.querySelector('.menu-icon');
+    const navLinks = document.querySelector('.nav-links');
+
+    menuIcon.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+    });
+});
+

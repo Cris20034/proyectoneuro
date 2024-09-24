@@ -7,13 +7,17 @@ body {
 }
 
 /* Estilo para el header con cabecera transparente */
-header {
-    position: absolute;
+.header{
+    position:fixed;
     top: 0;
     left: 0;
-    width: 100%;
-    background-color: transparent;
-    z-index: 1000;
+    right: 0;
+    background-color: rgba(1, 1, 1, 0.411);
+    padding: 0px 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
 }
 
 nav {
@@ -51,26 +55,6 @@ nav {
 .nav-links a:hover {
     color: #09ffde;
 }
-
-/* Estilos para el menú desplegable */
-
-
-.dropbtn {
-    background-color: transparent;
-    color: white;
-    font-size: 18px;
-    border: none;
-    cursor: pointer;
-    font-weight: 500;
-}
-
-/* Estilo para los íconos sociales */
-.social-icons a {
-    color: rgb(255, 255, 255);
-    margin-left: 15px;
-    font-size: 20px;
-}
-
 /* Hero section (Sección principal con imagen de fondo) */
 .hero {
     background-size: center;
