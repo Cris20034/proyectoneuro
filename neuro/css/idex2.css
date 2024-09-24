@@ -172,7 +172,7 @@
     background-image: linear-gradient(
         rgba(0,0,0,0.7),
         rgba(0,0,0,0.7)),
-        url(../images/meditacion.jpg);
+        url(../images/PortadaPanel.jpg);
         background-position: center bottom;
         background-repeat: no-repeat;
         background-size: cover;
@@ -186,8 +186,11 @@
     text-transform: uppercase;
     margin-bottom: 50px;
 }
+.servicios-content{
+    text-align: center;
+}
 .servicios-content p{
-    font-size: 15px;
+    font-size: 20px;
     color: #c5c5c5;
     margin-bottom: 50px;
     padding: 0 100px;
@@ -203,4 +206,13 @@
 .servicio-1 img{
     width: 250px;
     margin-bottom: 15px;
+    transition: transform 0.3s ease;
+}
+.servicio-1 img:hover{
+    transform: translateY(-10px);
+}
+.servicio-1 h3{
+    color: #eaccb3;
+    font-size: 18px;
+
 }
