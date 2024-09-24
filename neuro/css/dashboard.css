@@ -3,7 +3,7 @@ body {
 }
 
 .barra {
-    background: linear-gradient(45deg, rgba(139, 49, 190, 0.9), rgba(8, 38, 77, 0.9), rgba(12, 209, 209, 0.9));
+    background: #52d4eb;
     padding-top: 10px;
     padding-bottom: 15px;
     margin: 0;
