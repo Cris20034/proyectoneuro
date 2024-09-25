@@ -1,159 +1,147 @@
-body {
-    background: #f1f1f1;
-}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-.barra {
-    background: linear-gradient(45deg, rgba(139, 49, 190, 0.9), rgba(8, 38, 77, 0.9), rgba(12, 209, 209, 0.9));
-    padding-top: 10px;
-    padding-bottom: 15px;
+*,
+*::before,
+*::after{
     margin: 0;
-}
-
-.dropdown-menu {
-    margin: 17px;
-    background: #262a34;
-    color: white;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.568);
-}
-
-.menuperfil {
-    color: white;
-}
-
-.menuperfil:focus {
-    background: #23ae6b;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.568);
-}
-
-.cerrar:hover {
-    background-color: rgba(206, 65, 22, 0.877);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.568);
-}
-
-.user {
-    font-size: 35px;
-}
-
-
-/*BARRA LATERAL*/
-
-.barra-lateral {
-    background: #252121;
-    color: #fff;
-    min-width: 250px;
-    min-height: 100vh;
     padding: 0;
+    box-sizing: inherit;
 }
 
-.barra-lateral a {
-    color: #fff;
+body{
+    font-family: 'Poppins','sans-serif';
+    min-height: 100vh;
+    box-sizing: border-box;
 }
 
-
-/*ESTILOS MENU*/
-
-.barra-lateral .menu a {
-    display: block;
-    padding: 20px;
-    font-family: Roboto, sans-serif;
-    font-weight: 500;
-    border-bottom: 1px solid rgba(255, 255, 255, .1);
+.header{
+    position:fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(1, 1, 1, 0.7);
+    padding: 0px 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
 }
 
-.barra-lateral .menu a:hover {
-    background-color: #003C5D;
+.logo{
+    font-size: 25px;
+    text-transform: uppercase;
+    color: white;
+    font-weight: 700;
+}
+.navigation ul{
+    list-style: none;
+}
+.header .navigation ul li {
+    float: left;
+    position: relative;
+}
+
+.header .navigation ul li a {
+    font-size: 18px;
+    color: white;
     text-decoration: none;
+    padding: 20px;
+    display: block;
+    transition: all .2s ease;
 }
 
-.active {
-    background: #003C5D;
+.header .navigation ul li a:hover {
+    background-color: rgb(48, 229, 241);
 }
 
-.barra-lateral .menu {
-    border-top: 5px #fff solid;
+.header .navigation ul li ul {
+    position: absolute;
+    right: 0;
+    width: 300px;
+    background-color: rgba(1, 1, 1, 0.7);
+    display: none;
 }
 
-.barra-lateral .menu a i {
-    margin-right: 20px;
+.header .navigation ul li ul li a {
+    font-size: 15px;
+    text-transform: capitalize;
 }
 
-
-/*MAIN*/
-
-.main {
-    padding-top: 40px;
+.header .navigation ul li ul li ul {
+    position: absolute;
+    top: 0;
+    right: 300px;
 }
 
-.main .columna {
-    padding-left: 40px;
-    padding-right: 40px;
+.header .navigation ul li ul li {
+    width: 100%;
 }
 
-
-/*mediaquerys*/
-
-@media screen and (max-width:1300px) {
-    .barra-lateral {
-        min-width: auto;
-    }
-    .barra-lateral .menu a span {
-        display: none;
-    }
-    .barra-lateral .menu a i {
-        margin: 0;
-    }
-    .barra {
-        min-width: auto;
-    }
-    .dropdown-menu {
-        margin: 20px -79px 0px;
-    }
+.header .navigation ul li:hover > ul {
+    display: initial;
 }
 
-@media screen and (max-width:575px) {
-    .barra-lateral {
-        min-height: auto;
+#toggle,
+.header label{
+    display: none;
+    cursor: pointer;
+}
+.menu{
+    width: 45px;
+    height: 35px;
+}
+
+@media(max-width:950px) {
+    .header label {
+        display: initial;
     }
-    .barra-lateral .menu a {
-        display: inline-block;
-        border-bottom: none;
+
+    .header{
+        padding: 20px 10%;
     }
-    .dropdown-menu {
-        margin: 20px -78px 0px;
+
+    .header .navigation {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: rgba(1, 1, 1, 0.7);
+        display: flex;
     }
-    .logocppe {
+
+    .header .navigation ul li {
         width: 100%;
     }
-    body {
-        background: #D3D3D3;
-        font-size: 16px;
-        overflow: visible;
+
+    .header .navigation ul li a {
+        padding: 8px 30px 8px 10%;
     }
+
+    .header .navigation ul li ul {
+        position: relative;
+        width: 100%;
+        left: 0;
+    }
+
+    .header .navigation ul li ul li {
+        background-color: rgba(1, 1, 1, 0.7);
+    }
+
+    .header .navigation ul li ul li ul {
+        position: relative;
+        width: 100%;
+        left: 0;
+    }
+    #toggle:checked ~ .navigation {
+    display: block;
+
 }
 
-.formulariorecursos {
-    box-shadow: 0 0 3px rgba(0, 0, 0, 0.568);
-    border-radius: 10px;
-    padding: 20px;
 }
-
-.menu {
-    border-top: 5px #fff solid;
-}
-
-@media screen and (max-width:575px) {
-    .barra-lateral {
-        height: auto;
-    }
-    .barra-lateral.menu a {
-        display: inline-block;
-        border-bottom: none;
-    }
-    .dropdown-menu {
-        margin: 20px -78 0px;
-    }
-    body {
-        font-size: 16px;
-        overflow: visible;
-    }
+.hero {
+    min-height: 100vh;
+    background-image: url("../images/PortadaPanel.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
