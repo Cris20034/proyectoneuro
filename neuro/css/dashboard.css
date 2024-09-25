@@ -12,6 +12,7 @@ body{
     min-height: 100vh;
     box-sizing: border-box;
 }
+
 .header{
     position:fixed;
     top: 0;
@@ -24,6 +25,7 @@ body{
     justify-content: space-between;
     z-index: 1000;
 }
+
 .logo{
     font-size: 25px;
     text-transform: uppercase;
