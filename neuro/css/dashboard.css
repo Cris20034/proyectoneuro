@@ -90,12 +90,11 @@ body{
     width: 45px;
     height: 35px;
 }
-
-
-@media(max-width:950px){
+@media(max-width:950px) {
     .header label {
         display: initial;
     }
+
     .header{
         padding: 20px 10%;
     }
@@ -126,15 +125,16 @@ body{
         width: 100%;
         left: 0;
     }
+
     #toggle:checked ~ .navigation {
         display: block;
     }
 }
+
 .hero {
     min-height: 100vh;
     background-image: url("../images/PortadaPanel.jpg");
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
-
 }
