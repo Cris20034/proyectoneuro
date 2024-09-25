@@ -194,11 +194,18 @@ body::before {
     clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 100%, 0 80%);
 }
 
-/* Media queries para pantallas más pequeñas */
+/* Media  para pantallas más pequeñas */
 @media (max-width: 768px) {
     nav {
         flex-direction: column;
         padding: 10px 20px;
+    }
+
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f8ff;
+        margin: 0;
+        padding: 20px;
     }
 
     .nav-links {
@@ -369,136 +376,88 @@ body::before {
         padding: 20px;
     }
 }
-/* Estilos del calendario */
-#calendar {
-    max-width: 900px;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: #00ffea;
-    border: 1px solid #000000;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(255, 204, 0, 0.1);
-}
 
-/* Estilos para los botones del calendario */
-.fc-button {
-    background-color: #007bff; /* Color de fondo */
-    color: rgb(255, 234, 0); /* Color del texto */
-    border: none;
-    border-radius: 5px;
-    padding: 10px 15px;
-    cursor: pointer;
-}
 
-.fc-button:hover {
-    background-color: #ff5405; /* Color de fondo al pasar el mouse */
-}
-
-/* Estilos para los encabezados del calendario */
-.fc-toolbar h2 {
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff;
     margin: 0;
-    font-size: 1.5em;
-}
-
-/* Estilos de las celdas del calendario */
-.fc-day {
-    cursor: pointer; /* Cursor de puntero */
-}
-
-/* Estilo de los días seleccionados */
-.fc-selected-day {
-    background-color: #007bff; /* Color para días seleccionados */
-    color: rgb(6, 252, 211); /* Color del texto para días seleccionados */
-}
-
-/* Estilos para el selector de horario */
-select#horarios {
-    margin: 20px 0;
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #fff700;
-    width: calc(100% - 22px);
-    display: block;
-    font-size: 16px;
-}
-
-/* Estilo para el botón Agendar Cita */
-button#agendar {
-    background-color: #28a745; /* Color de fondo */
-    color: rgb(229, 255, 0); /* Color del texto */
-    border: none;
-    border-radius: 5px;
-    padding: 10px 20px;
-    cursor: pointer;
-    font-size: 16px;
-    margin-top: 10px;
-}
-
-button#agendar:hover {
-    background-color: #218838; /* Color de fondo al pasar el mouse */
-}
-
-/* Estilos para el footer */
-footer {
-    text-align: center;
     padding: 20px;
-    background-color: #404040;
-    border-top: 1px solid #fff200;
-    position: relative;
-    bottom: 0;
-    width: 100%;
 }
 
-/* Estilos de la card */
-.card {
-    background-color: white;
+.container {
+    max-width: 800px;
+    margin: auto;
+    background: white;
+    padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    text-align: center;
+    color: #4a90e2;
+}
+
+p {
+    text-align: center;
+    color: #555;
+}
+
+.select-container {
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 10px;
+    display: block;
+}
+
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.card {
+    background-color: #fff;
     padding: 20px;
-    max-width: 400px;
-    margin: 20px auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.card h2 {
+    margin-top: 0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
     text-align: center;
     border: 1px solid #ddd;
 }
 
-.card h2 {
-    font-size: 24px;
-    color: #5a8e8b;
-    margin-bottom: 20px;
-}
-
-/* Estilo del select */
-#horarios {
-    width: 100%;
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    margin-bottom: 20px;
-}
-
-/* Estilo del botón */
-#agendar {
-    background-color: #5a8e8b;
-    color: white;
-    padding: 12px;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
+td.available {
+    background-color: #c8e6c9;
     cursor: pointer;
-    transition: background-color 0.3s;
-    width: 100%;
 }
 
-#agendar:hover {
-    background-color: #4b7a7a;
+td.full {
+    background-color: #ef9a9a;
 }
 
-/* Estilo de la información de cupo */
-#cupo-info {
-    font-size: 16px;
-    color: #333;
-    margin-top: 10px;
-
+td.selected {
+    background-color: #ffe0b2;
 }
+
+
+
+
 

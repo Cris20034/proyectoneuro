@@ -8,7 +8,10 @@
     <link rel="shortcut icon" href="images/favicon-32x32.png" type="image/x-icon">
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js'></script>
-<body>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendar Cita - Neurovida</title>
+    <link rel="stylesheet" href="styles.css">
   <header>
     <nav>
       <div class="logo">
@@ -27,8 +30,9 @@
       </div>
     </nav>
   </header>
+  
     
-      <!-- Sección Hero -->
+ 
       <section class="hero">
         <div class="hero-text">
           <h1>Agenda tu cita </h1>
@@ -36,14 +40,121 @@
         </div>
        </section>
 
-    <main>
-        <h1>Ver Citas</h1>
-        <p>Aquí puedes ver todas las citas agendadas.</p>
-    </main>
-
+       <head>
+        <title>Agenda de Citas</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script>
+            let slots = {
+                'Lunes y Viernes (8:00 a 9:00)': 15,
+                'Lunes y Viernes (9:00 a 10:00)': 15,
+                'Martes y Sábado (8:00 a 9:00)': 15,
+                'Martes y Sábado (9:00 a 10:00)': 15
+            };
+    
+            function showSchedule() {
+                const daySelect = document.getElementById('select-day');
+                const scheduleDiv = document.getElementById('schedule');
+                const messageDiv = document.getElementById('message');
+                const bookButton = document.getElementById('book-button');
+                const noSlotsMessage = document.getElementById('no-slots-message');
+                
+                let allSlotsFull = true;
+                for (let slot in slots) {
+                    if (slots[slot] > 0) {
+                        allSlotsFull = false;
+                        break;
+                    }
+                }
+    
+                if (allSlotsFull) {
+                    noSlotsMessage.classList.remove('hidden');
+                    scheduleDiv.classList.add('hidden');
+                } else {
+                    noSlotsMessage.classList.add('hidden');
+                    if (daySelect.value in slots) {
+                        if (slots[daySelect.value] > 0) {
+                            messageDiv.classList.add('hidden');
+                            bookButton.disabled = false;
+                        } else {
+                            messageDiv.classList.remove('hidden');
+                            bookButton.disabled = true;
+                        }
+                        scheduleDiv.classList.remove('hidden');
+                    } else {
+                        scheduleDiv.classList.add('hidden');
+                    }
+                }
+            }
+    
+            function bookAppointment() {
+                const daySelect = document.getElementById('select-day');
+                const successMessage = document.getElementById('success-message');
+                const name = document.getElementById('name').value;
+                const surname = document.getElementById('surname').value;
+                const email = document.getElementById('email').value;
+                const phone = document.getElementById('phone').value;
+    
+                if (name && surname && email && phone && slots[daySelect.value] > 0) {
+                    slots[daySelect.value]--;
+                    successMessage.textContent = `Hola ${name} ${surname}, tu email es ${email} y tu número de teléfono es ${phone}. Tu cita ha sido agendada exitosamente.`;
+                    successMessage.classList.remove('hidden');
+                    showSchedule();
+                } else {
+                    successMessage.textContent = 'Por favor, complete todos los campos.';
+                    successMessage.classList.remove('hidden');
+                }
+            }
+        </script>
+    </head>
+    <body class="bg-gradient-to-r from-green-100 to-blue-200 flex flex-col items-center justify-center min-h-screen">
+        <div class="text-center mb-8">
+            <h1 class="text-5xl font-extrabold text-green-700">Ver Citas</h1>
+            <p class="text-gray-800 text-lg">Aquí puedes ver todas las citas agendadas.</p>
+        </div>
+        <div class="bg-white p-10 rounded-xl shadow-2xl w-full max-w-lg">
+            <div class="flex justify-center mb-6">
+                <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-RcpoXHkzChYnDbFAyeQ8tamr/user-ehrvabJ3DufsCu8YJ7PqY5gl/img-o8UpVVXe1W6FHsCbX62XppNV.png?st=2024-09-25T03%3A21%3A43Z&se=2024-09-25T05%3A21%3A43Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2024-09-24T23%3A20%3A39Z&ske=2024-09-25T23%3A20%3A39Z&sks=b&skv=2024-08-04&sig=GQFnV04x/LJXI9QZVf83ADTRBrQ6SmEepuKhZarlSEo%3D" alt="Imagen representativa del servicio de yoga" class="rounded-full shadow-lg" width="100" height="100">
+            </div>
+            <h2 class="text-4xl font-extrabold text-green-700 text-center mb-6">YOGA</h2>
+            <p class="text-gray-800 text-center mb-8">Relaja tu mente y cuerpo con nuestras clases de yoga.</p>
+            <div>
+                <label for="select-day" class="block text-gray-800 font-semibold mb-3">Selecciona un día:</label>
+                <select id="select-day" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500" onchange="showSchedule()">
+                    <option>--Seleccione un día--</option>
+                    <option>Lunes y Viernes (8:00 a 9:00)</option>
+                    <option>Lunes y Viernes (9:00 a 10:00)</option>
+                    <option>Martes y Sábado (8:00 a 9:00)</option>
+                    <option>Martes y Sábado (9:00 a 10:00)</option>
+                </select>
+            </div>
+            <div class="mt-6">
+                <label for="name" class="block text-gray-800 font-semibold mb-2">Nombre:</label>
+                <input type="text" id="name" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500">
+            </div>
+            <div class="mt-4">
+                <label for="surname" class="block text-gray-800 font-semibold mb-2">Apellido:</label>
+                <input type="text" id="surname" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500">
+            </div>
+            <div class="mt-4">
+                <label for="email" class="block text-gray-800 font-semibold mb-2">Email:</label>
+                <input type="email" id="email" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500">
+            </div>
+            <div class="mt-4">
+                <label for="phone" class="block text-gray-800 font-semibold mb-2">Número de Teléfono:</label>
+                <input type="tel" id="phone" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500">
+            </div>
+            <div id="schedule" class="hidden mt-6">
+                <button id="book-button" class="w-full bg-green-600 text-white p-3 rounded-lg hover:bg-green-700 transition duration-300" onclick="bookAppointment()">Agendar Cita</button>
+                <p id="message" class="text-red-600 mt-3 hidden">Cupos no disponibles</p>
+            </div>
+            <p id="success-message" class="text-green-600 mt-6 hidden"></p>
+            <p id="no-slots-message" class="text-red-600 mt-6 hidden">Lo sentimos, no hay cupos disponibles, intenta agendar en otro horario.</p>
+        </div>
+        <script src="../js/script.js"></script>
+    </body>
     <footer>
-        <script type="text/javascript">
-  (function(d, t) {
+    <script type="text/javascript">
+   (function(d, t) {
       var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
       v.onload = function() {
         window.voiceflow.chat.load({
@@ -54,9 +165,11 @@
       }
       v.src = "https://cdn.voiceflow.com/widget/bundle.mjs"; v.type = "text/javascript"; s.parentNode.insertBefore(v, s);
   })(document, 'script');
-</script>
+  </script>
         <p>&copy; 2024 Mi Empresa</p>
     </footer>
+
+
 </body>
 </html>
 

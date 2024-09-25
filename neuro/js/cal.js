@@ -1,59 +1,48 @@
-let today = new Date();
-let currentMonth = today.getMonth();
-let currentYear = today.getFullYear();
+const timeSlots = [
+  { time: '8:00 - 9:00', maxAppointments: 15, appointments: 0 },
+  { time: '9:00 - 10:00', maxAppointments: 15, appointments: 0 },
+];
 
-const months = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
+function createSchedule() {
+  const schedule = document.getElementById('schedule');
+  schedule.innerHTML = ''; // Limpiar filas anteriores
 
-const monthAndYear = document.getElementById("monthAndYear");
+  timeSlots.forEach(slot => {
+      const row = document.createElement('tr');
+      const cellTime = document.createElement('td');
+      cellTime.textContent = slot.time;
 
-function showCalendar(month, year) {
-    const firstDay = (new Date(year, month)).getDay();
-    const daysInMonth = 32 - new Date(year, month, 32).getDate();
+      const cellStatus = document.createElement('td');
+      cellStatus.className = slot.appointments < slot.maxAppointments ? 'available' : 'full';
+      cellStatus.textContent = slot.appointments < slot.maxAppointments ? 'Disponible' : 'Lleno';
+      
+      cellStatus.onclick = () => {
+          if (slot.appointments < slot.maxAppointments) {
+              slot.appointments++;
+              cellStatus.textContent = `Cita Agendada (${slot.appointments}/${slot.maxAppointments})`;
+              if (slot.appointments === slot.maxAppointments) {
+                  cellStatus.classList.remove('available');
+                  cellStatus.classList.add('full');
+              }
+          } else {
+              alert('Este horario ya está lleno.');
+          }
+      };
 
-    const calendarBody = document.getElementById("calendar-body");
-    calendarBody.innerHTML = "";
-
-    monthAndYear.innerHTML = months[month] + " " + year;
-
-    let date = 1;
-    for (let i = 0; i < 6; i++) {
-        const row = document.createElement("tr");
-
-        for (let j = 0; j < 7; j++) {
-            if (i === 0 && j < firstDay) {
-                const cell = document.createElement("td");
-                cell.appendChild(document.createTextNode(""));
-                row.appendChild(cell);
-            } else if (date > daysInMonth) {
-                break;
-            } else {
-                const cell = document.createElement("td");
-                const cellText = document.createTextNode(date);
-                cell.appendChild(cellText);
-
-                if (date === today.getDate() && year === today.getFullYear() && month === today.getMonth()) {
-                    cell.classList.add("today");
-                }
-
-                row.appendChild(cell);
-                date++;
-            }
-        }
-
-        calendarBody.appendChild(row);
-    }
+      row.appendChild(cellTime);
+      row.appendChild(cellStatus);
+      schedule.appendChild(row);
+  });
 }
 
-function nextMonth() {
-    currentYear = (currentMonth === 11) ? currentYear + 1 : currentYear;
-    currentMonth = (currentMonth + 1) % 12;
-    showCalendar(currentMonth, currentYear);
-}
-
-function prevMonth() {
-    currentYear = (currentMonth === 0) ? currentYear - 1 : currentYear;
-    currentMonth = (currentMonth === 0) ? 11 : currentMonth - 1;
-    showCalendar(currentMonth, currentYear);
-}
-
-showCalendar(currentMonth, currentYear);
+document.getElementById('daySelect').addEventListener('change', function() {
+  const selectedDay = this.value;
+  const timeSlotsDiv = document.getElementById('timeSlots');
+  
+  if (selectedDay) {
+      timeSlotsDiv.style.display = 'block';
+      createSchedule();
+  } else {
+      timeSlotsDiv.style.display = 'none';
+  }
+});
