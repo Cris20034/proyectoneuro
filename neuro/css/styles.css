@@ -9,9 +9,8 @@
     font-family:'Poppins', 'sans-serif';
 }
 .body{
-    font-family:'Poppins', 'sans-serif';
+    
 }
-
 .container{
     max-width: 1200px;
     margin: 0 auto;
@@ -355,11 +354,30 @@ link h3{
         flex-direction: column;
     }
     .general-1{
-        width: 100px;
+        width: 100%;
         padding: 30px;
         text-align: center;
     }
     .general-2, .general-3{
         display: none;
+    }
+    .blog{
+        padding: 30px;
+    }
+    .blog{
+        padding: 30px;
+    }
+    .blog-content{
+        flex-direction: column;
+    }
+    .blog-1{
+        padding: 0;
+    }
+    .footer{
+        padding: 30px;
+    }
+    .footer-content{
+        flex-direction: column;
+        text-align: center;
     }
 }
