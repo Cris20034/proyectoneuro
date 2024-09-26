@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible"content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neurovida</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/styles.css')}}">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon-32x32.png') }}" type="image/x-icon">
+    <!-- Se usa para linquear las imagenes y las rutas, se usa para CSS, Imagenes, Rutas, etc    -->
+
+</head>
+<body>
+    <header class="header">
+        <div class="menu container">
+            <a href="index.html" class="logo">Neurovida</a>
+            <input type="checkbox"  id="menu" />
+            <label for="menu">
+                <img src="{{ url_for('static', filename='images/menu-hamburguesa.png') }}" alt="Menu Hamburguesa">
+            </label>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="{{ url_for('index') }}">Home</a></li>
+                    <li><a href="citas.html">Agendar citas</a></li>
+                    <li><a href="quienes_somos.html">¿Quienes somos?</a></li>
+                    <li><a href="#">Servicios</a></li>
+
+                </ul>
+            </nav>
+        </div>
+
+        <div class="header-content container">
+            <h1>Neurovida</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat quidem aut obcaecati vero aspernatur, praesentium itaque eaque recusandae nulla nesciunt quod sunt quasi soluta neque dolore architecto odio reiciendis nemo?
+            </p>
+            <a href="citas.html" class="btn-1"> Agendar Cita</a>
+        </div>
+    </header>
+
+
+
+    <section class="frase">
+        <!-- Se usa para linquear las imagenes y las rutas, se usa para CSS, Imagenes, Rutas, etc    -->
+        <img class="frase-img" src="{{ url_for('static', filename='images/cerbro.png') }}">
+
+        <div class="frase-content container">
+            <h2>Lorem, ipsum dolor.</h2>
+            <p class="txt-p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi aut natus, rerum praesentium nobis ut deserunt voluptatum eligendi libero omnis neque provident, quasi perspiciatis mollitia earum cupiditate labore! Repellendus, dolorem.
+            </p>
+            <div class="coffe-group">
+                <div class="coffe-2">
+                    <img src="{{ url_for('static', filename='images/cursos de computacion.jpg') }}" alt="">
+                    <h3> Lorem, ipsum dolor.</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, architecto dolorem. Doloremque, rem similique quo dicta, molestiae quae quia dolor porro laboriosam veritatis nihil aut nam modi ut perspiciatis esse.
+                    </p>
+                </div>
+                <div class="coffe-1">
+                    <img src="{{ url_for('static', filename='images/gimnasia.png ') }}" alt="">
+                    <h3> Lorem, ipsum dolor.</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, architecto dolorem. Doloremque, rem similique quo dicta, molestiae quae quia dolor porro laboriosam veritatis nihil aut nam modi ut perspiciatis esse.
+                    </p>
+                </div>
+                <div class="coffe-1">
+                    <img src="{{ url_for('static', filename='images/masajes.jpg') }}" alt="">
+                    <h3> Lorem, ipsum dolor.</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, architecto dolorem. Doloremque, rem similique quo dicta, molestiae quae quia dolor porro laboriosam veritatis nihil aut nam modi ut perspiciatis esse.
+                    </p>
+                </div>
+            </div>
+            <a href="citas.html" class="btn-1">Agendar cita</a>
+        </div>
+    </section>
+
+
+    <main class="servicios">
+        <div class="servicios-content container">
+            <h2> Nuestros Servicios </h2>
+
+            <div class="servicios-group">
+                <div class="servicio-1">
+                    <img src="{{ url_for('static', filename='images/manualidades.jpg') }}" alt="">
+                    <h3>Servicio 1 </h3>
+                </div>
+                <div class="servicio-1">
+                    <img src="{{ url_for('static', filename='images/tareas dirigidas.jpg')}}" alt="">
+                    <h3>Servicio 2</h3>
+                </div>
+                <div class="servicio-1">
+                    <img src="{{ url_for('static', filename='images/gimnasia.png ')}}" alt="">
+                    <h3>Servicio 3</h3>
+                </div>
+            </div>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae odio ab voluptatum incidunt, voluptas repellendus animi labore rerum sunt vitae asperiores quidem? Quia placeat praesentium veniam in officia velit dignissimos.
+            </p>
+            <a href="citas.html" class="btn-1">Agendar cita</a>
+        </div>
+    </main>
+
+
+    <section class="general">
+        <div class=" general-1">
+            <h2>Lorem, ipsum dolor.</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident esse dolor dolore iure suscipit aliquam. Veniam, excepturi quam quos beatae porro accusantium provident debitis reiciendis itaque laboriosam, voluptatibus ex illo?</p>
+            <a href="citas.html" class="btn-1"> Agendar citas</a>
+        </div>
+        <div class="general-2"></div>
+    </section>
+
+    <section class="general">
+        <div class="general-3"></div>
+        <div class=" general-1">
+            <h2>Lorem, ipsum dolor.</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident esse dolor dolore iure suscipit aliquam. Veniam, excepturi quam quos beatae porro accusantium provident debitis reiciendis itaque laboriosam, voluptatibus ex illo?</p>
+            <a href="citas.html" class="btn-1"> Agendar citas</a>
+        </div>
+    </section>
+
+
+    <section class="blog container">
+        <h2>Blog</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <div class="blog-content">
+            <div class="blog-1">
+            <img src="{{ url_for('static', filename='images/images.jpg')}}" alt="">
+            <h3>Blog 1</h3>
+            <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio dicta, quidem quae mollitia dolorum sit accusamus ab expedita fuga odit nam nisi earum? Veritatis, quibusdam magnam pariatur optio culpa iure!
+            </p>
+            </div>
+            <div class="blog-1">
+                <img src="{{ url_for('static', filename='images/images.jpg')}}" alt="">
+                <h3>Blog 2</h3>
+                <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio dicta, quidem quae mollitia dolorum sit accusamus ab expedita fuga odit nam nisi earum? Veritatis, quibusdam magnam pariatur optio culpa iure!
+                </p>
+            </div>
+            <div class="blog-1">
+                <img src="{{ url_for('static', filename='images/images.jpg')}}" alt="">
+                <h3>Blog 3</h3>
+                <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio dicta, quidem quae mollitia dolorum sit accusamus ab expedita fuga odit nam nisi earum? Veritatis, quibusdam magnam pariatur optio culpa iure!
+                </p>
+            </div>
+        </div>
+        <a href="citas.html" class="btn-1"> Agendar cita</a>
+    </section>
+
+            
+    <footer class="footer">
+        <div class="footer-content container">
+            <div class="link">
+                <h3>Lorem ipsum dolor .</h3>
+                <ul>
+                    <li><a href="">facebook</a></li>
+                    <li><a href="">facebook</a></li>
+                    <li><a href="">facebook</a></li>
+                    <li><a href="">facebook</a></li>
+                </ul>
+            </div>
+            <div class="link">
+                <h3>Lorem ipsum dolor .</h3>
+                <ul>
+                    <li><a href="">facebook</a></li>
+                    <li><a href="">facebook</a></li>
+                    <li><a href="">facebook</a></li>
+                    <li><a href="">facebook</a></li>
+                </ul>
+            </div>
+            <div class="link">
+                <h3>Lorem ipsum dolor .</h3>
+                <ul>
+                    <li><a href="">facebook</a></li>
+                    <li><a href="">facebook</a></li>
+                    <li><a href="">facebook</a></li>
+                    <li><a href="">facebook</a></li>
+                </ul>
+            </div>
+            <div class="link">
+                <h3>Lorem ipsum dolor .</h3>
+                <ul>
+                    <li><a href="">facebook</a></li>
+                    <li><a href="">facebook</a></li>
+                    <li><a href="">facebook</a></li>
+                    <li><a href="">facebook</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
