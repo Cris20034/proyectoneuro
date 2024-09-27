@@ -285,7 +285,136 @@ link h3{
     display: block;
     margin-bottom: 15px;
 }
-@media(max-width:991px){
+
+.rating-section, .testimonials-section {
+    max-width: 600px;
+    margin: 20px auto;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Encabezados de secciones */
+.rating-section h2, .testimonials-section h2 {
+    margin-top: 0;
+    color: #333;
+}
+
+/* Estilo para la calificación con estrellas */
+.star-rating {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+}
+
+.star-rating input {
+    display: none;
+}
+
+.star-rating label {
+    font-size: 2em;
+    color: #ccc;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.star-rating input:checked ~ label {
+    color: #f7d106;
+}
+
+.star-rating label:hover,
+.star-rating label:hover ~ label {
+    color: #f7d106;
+}
+
+/* Estilo del área de texto */
+.testimonial-input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/* Estilo del botón de enviar */
+.btn-submit {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.btn-submit:hover {
+    background-color: #45a049;
+}
+
+/* Estilo de cada testimonio */
+.testimonial-item {
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+}
+
+.testimonial-item:last-child {
+    border-bottom: none;
+}
+
+.rating-display {
+    color: #f7d106;
+}
+/* Media Queries para dispositivos móviles */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    .rating-section, .testimonials-section {
+        margin: 10px;
+        padding: 15px;
+    }
+
+    .star-rating label {
+        font-size: 1.5em; /* Reducir el tamaño de las estrellas */
+    }
+
+    .testimonial-input {
+        padding: 8px;
+        font-size: 14px; /* Reducir el tamaño del texto del testimonio */
+    }
+
+    .btn-submit {
+        padding: 8px 15px;
+        font-size: 14px; /* Ajustar el tamaño del botón */
+    }
+}
+
+@media (max-width: 768px) {
+    .star-rating {
+        flex-direction: row; /* Cambiar la dirección de las estrellas a filas */
+    }
+
+    .star-rating label {
+        font-size: 1.2em; /* Reducir aún más el tamaño de las estrellas */
+    }
+
+    .rating-section, .testimonials-section {
+        padding: 10px;
+    }
+
+    .testimonial-input {
+        font-size: 12px; /* Reducir el tamaño del texto para pantallas muy pequeñas */
+    }
+
+    .btn-submit {
+        padding: 10px;
+        font-size: 12px; /* Ajustar el tamaño del botón */
+    }
+}
+@media(max-width:768px){
     .menu{
         padding: 30px;
     }

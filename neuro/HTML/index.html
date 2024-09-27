@@ -143,6 +143,25 @@
         <a href="citas.html" class="btn-1"> Agendar cita</a>
     </section>
 
+    <section class="rating-section">
+        <h2>Deja tu Calificación</h2>
+        <div class="star-rating">
+            <input type="radio" id="star5" name="rating" value="5"><label for="star5">&#9733;</label>
+            <input type="radio" id="star4" name="rating" value="4"><label for="star4">&#9733;</label>
+            <input type="radio" id="star3" name="rating" value="3"><label for="star3">&#9733;</label>
+            <input type="radio" id="star2" name="rating" value="2"><label for="star2">&#9733;</label>
+            <input type="radio" id="star1" name="rating" value="1"><label for="star1">&#9733;</label>
+        </div>
+        <textarea id="testimonial" class="testimonial-input" placeholder="Escribe tu testimonio aquí..."></textarea>
+        <button class="btn-submit" onclick="submitTestimonial()">Enviar</button>
+    </section>
+
+    <!-- Sección de Testimonios -->
+    <section class="testimonials-section">
+        <h2>Testimonios</h2>
+        <div id="testimonial-list"></div>
+    </section>
+
             
     <footer class="footer">
         <div class="footer-content container">
@@ -184,5 +203,6 @@
             </div>
         </div>
     </footer>
+    <script src="../js/script.js"></script>
 </body>
 </html>
