@@ -1,11 +1,204 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+<html>
+ <head>
+  <title>
+   NEUROVIDA - Nuestros Servicios
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"/>
+  <style>
+   .service-card {
+     transition: transform 0.3s ease-in-out;
+   }
+   .service-card:hover {
+     transform: scale(1.05);
+   }
+   .service-card:hover .service-info {
+     display: block;
+     animation: fadeIn 0.3s ease-in-out;
+   }
+   .service-info {
+     display: none;
+   }
+   @keyframes fadeIn {
+     from {
+       opacity: 0;
+     }
+     to {
+       opacity: 1;
+     }
+   }
+  </style>
+ </head>
+ <body class="bg-white font-roboto">
+  <div class="container mx-auto px-4">
+   <div class="text-center mt-8">
+    <img alt="Logo de Neurovida" class="mx-auto" height="200" src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-RcpoXHkzChYnDbFAyeQ8tamr/user-ehrvabJ3DufsCu8YJ7PqY5gl/img-6xxcpOXThBWi4Do193SSL5sO.png?st=2024-09-30T03%3A17%3A50Z&amp;se=2024-09-30T05%3A17%3A50Z&amp;sp=r&amp;sv=2024-08-04&amp;sr=b&amp;rscd=inline&amp;rsct=image/png&amp;skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&amp;sktid=a48cca56-e6da-484e-a814-9c849652bcb3&amp;skt=2024-09-30T01%3A06%3A18Z&amp;ske=2024-10-01T01%3A06%3A18Z&amp;sks=b&amp;skv=2024-08-04&amp;sig=51ZnVUMMPVH/BKQgnApygWyHzATzDPmTwo2j4jCFVKE%3D" width="200"/>
+    <h1 class="text-4xl font-bold mt-4">
+     NEUROVIDA
+    </h1>
+   </div>
+   <nav class="mt-8 text-center">
+    <a class="text-blue-500 hover:underline" href="#">
+     Home
+    </a>
+    <a class="text-blue-500 hover:underline ml-4" href="#">
+     ¿Quiénes somos?
+    </a>
+    <a class="text-blue-500 hover:underline ml-4" href="#">
+     Servicios
+    </a>
+    <a class="text-blue-500 hover:underline ml-4" href="#">
+     Agenda tu cita
+    </a>
+   </nav>
+   <div class="mt-12">
+    <h2 class="text-3xl font-bold">
+     Nuestros Servicios
+    </h2>
+    <h3 class="text-2xl font-bold mt-2">
+     NEUROVIDA
+    </h3>
+   </div>
+   <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
+    <div class="bg-white shadow-md rounded-lg overflow-hidden service-card cursor-pointer relative">
+     <img alt="Persona haciendo yoga al atardecer" class="w-full h-48 object-cover" height="300" src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-RcpoXHkzChYnDbFAyeQ8tamr/user-ehrvabJ3DufsCu8YJ7PqY5gl/img-HLxtUxTB4clCkd6EbleqJbJ8.png?st=2024-09-30T03%3A17%3A51Z&amp;se=2024-09-30T05%3A17%3A51Z&amp;sp=r&amp;sv=2024-08-04&amp;sr=b&amp;rscd=inline&amp;rsct=image/png&amp;skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&amp;sktid=a48cca56-e6da-484e-a814-9c849652bcb3&amp;skt=2024-09-30T00%3A56%3A32Z&amp;ske=2024-10-01T00%3A56%3A32Z&amp;sks=b&amp;skv=2024-08-04&amp;sig=UI6ryO3hJp4Bn4Hz3pZ%2BFl%2BjGGB/F/hMKlxDSSY80Gk%3D" width="400"/>
+     <div class="p-4">
+      <h4 class="text-xl font-bold">
+       Yoga
+      </h4>
+     </div>
+     <div class="absolute inset-0 bg-white bg-opacity-90 p-4 service-info">
+      <h4 class="text-xl font-bold">
+       Yoga
+      </h4>
+      <p class="mt-2 text-gray-600">
+       Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque in veniam libero odio, itaque pariatur, minus doloremque est debitis cumque sint nisi id, quam assumenda! Aspernatur eum natus magni impedit.
+      </p>
+      <button class="mt-4 bg-blue-500 text-white px-4 py-2 rounded">
+       ¿Deseas agendar una cita?
+      </button>
+     </div>
+    </div>
+    <div class="bg-white shadow-md rounded-lg overflow-hidden service-card cursor-pointer relative">
+     <img alt="Persona meditando con piedras apiladas" class="w-full h-48 object-cover" height="300" src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-RcpoXHkzChYnDbFAyeQ8tamr/user-ehrvabJ3DufsCu8YJ7PqY5gl/img-lD5lbq7Trj6PWbPPvMhXgWKX.png?st=2024-09-30T03%3A17%3A41Z&amp;se=2024-09-30T05%3A17%3A41Z&amp;sp=r&amp;sv=2024-08-04&amp;sr=b&amp;rscd=inline&amp;rsct=image/png&amp;skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&amp;sktid=a48cca56-e6da-484e-a814-9c849652bcb3&amp;skt=2024-09-30T00%3A56%3A25Z&amp;ske=2024-10-01T00%3A56%3A25Z&amp;sks=b&amp;skv=2024-08-04&amp;sig=C7lsuQtfJC4bE7gVmgZiarug0scR139JaOsbxtZiWS0%3D" width="400"/>
+     <div class="p-4">
+      <h4 class="text-xl font-bold">
+       Meditación
+      </h4>
+     </div>
+     <div class="absolute inset-0 bg-white bg-opacity-90 p-4 service-info">
+      <h4 class="text-xl font-bold">
+       Meditación
+      </h4>
+      <p class="mt-2 text-gray-600">
+       Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque in veniam libero odio, itaque pariatur, minus doloremque est debitis cumque sint nisi id, quam assumenda! Aspernatur eum natus magni impedit.
+      </p>
+      <button class="mt-4 bg-blue-500 text-white px-4 py-2 rounded">
+       ¿Deseas agendar una cita?
+      </button>
+     </div>
+    </div>
+    <div class="bg-white shadow-md rounded-lg overflow-hidden service-card cursor-pointer relative">
+     <img alt="Persona recibiendo un masaje relajante" class="w-full h-48 object-cover" src="data:image/jpeg;base64,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"/>
+     <div class="p-4">
+      <h4 class="text-xl font-bold">
+       Masajes Relajantes
+      </h4>
+     </div>
+     <div class="absolute inset-0 bg-white bg-opacity-90 p-4 service-info">
+      <h4 class="text-xl font-bold">
+       Masajes Relajantes
+      </h4>
+      <p class="mt-2 text-gray-600">
+       Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque in veniam libero odio, itaque pariatur, minus doloremque est debitis cumque sint nisi id, quam assumenda! Aspernatur eum natus magni impedit.
+      </p>
+      <button class="mt-4 bg-blue-500 text-white px-4 py-2 rounded">
+       ¿Deseas agendar una cita?
+      </button>
+     </div>
+    </div>
+    <div class="bg-white shadow-md rounded-lg overflow-hidden service-card cursor-pointer relative">
+     <img alt="Ilustración de un cerebro con pesas" class="w-full h-48 object-cover" height="300" src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-RcpoXHkzChYnDbFAyeQ8tamr/user-ehrvabJ3DufsCu8YJ7PqY5gl/img-S9o8ZWdFiTKEnWRsyDsI8sQB.png?st=2024-09-30T03%3A17%3A43Z&amp;se=2024-09-30T05%3A17%3A43Z&amp;sp=r&amp;sv=2024-08-04&amp;sr=b&amp;rscd=inline&amp;rsct=image/png&amp;skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&amp;sktid=a48cca56-e6da-484e-a814-9c849652bcb3&amp;skt=2024-09-30T02%3A23%3A13Z&amp;ske=2024-10-01T02%3A23%3A13Z&amp;sks=b&amp;skv=2024-08-04&amp;sig=JdhxU7y4qFQUKXatp6qJCG3hvZ99t9PAYtfzbxDykJQ%3D" width="400"/>
+     <div class="p-4">
+      <h4 class="text-xl font-bold">
+       Gimnasia Cerebral
+      </h4>
+     </div>
+     <div class="absolute inset-0 bg-white bg-opacity-90 p-4 service-info">
+      <h4 class="text-xl font-bold">
+       Gimnasia Cerebral
+      </h4>
+      <p class="mt-2 text-gray-600">
+       Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque in veniam libero odio, itaque pariatur, minus doloremque est debitis cumque sint nisi id, quam assumenda! Aspernatur eum natus magni impedit.
+      </p>
+      <button class="mt-4 bg-blue-500 text-white px-4 py-2 rounded">
+       ¿Deseas agendar una cita?
+      </button>
+     </div>
+    </div>
+    <div class="bg-white shadow-md rounded-lg overflow-hidden service-card cursor-pointer relative">
+     <img alt="Niños haciendo tareas dirigidas" class="w-full h-48 object-cover" height="300" src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-RcpoXHkzChYnDbFAyeQ8tamr/user-ehrvabJ3DufsCu8YJ7PqY5gl/img-m0hELThprRLOXJUZIZbliMlX.png?st=2024-09-30T03%3A17%3A47Z&amp;se=2024-09-30T05%3A17%3A47Z&amp;sp=r&amp;sv=2024-08-04&amp;sr=b&amp;rscd=inline&amp;rsct=image/png&amp;skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&amp;sktid=a48cca56-e6da-484e-a814-9c849652bcb3&amp;skt=2024-09-30T01%3A00%3A07Z&amp;ske=2024-10-01T01%3A00%3A07Z&amp;sks=b&amp;skv=2024-08-04&amp;sig=0j3X2cPL5hABlFtOvcLaURKwGMBIJos2%2BPxXNGh2OAM%3D" width="400"/>
+     <div class="p-4">
+      <h4 class="text-xl font-bold">
+       Tareas Dirigidas
+      </h4>
+     </div>
+     <div class="absolute inset-0 bg-white bg-opacity-90 p-4 service-info">
+      <h4 class="text-xl font-bold">
+       Tareas Dirigidas
+      </h4>
+      <p class="mt-2 text-gray-600">
+       Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque in veniam libero odio, itaque pariatur, minus doloremque est debitis cumque sint nisi id, quam assumenda! Aspernatur eum natus magni impedit.
+      </p>
+      <button class="mt-4 bg-blue-500 text-white px-4 py-2 rounded">
+       ¿Deseas agendar una cita?
+      </button>
+     </div>
+    </div>
+    <div class="bg-white shadow-md rounded-lg overflow-hidden service-card cursor-pointer relative">
+     <img alt="Personas en un curso de computación" class="w-full h-48 object-cover" height="300" src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-RcpoXHkzChYnDbFAyeQ8tamr/user-ehrvabJ3DufsCu8YJ7PqY5gl/img-Da840FZzNfqjtSSN8IdLzFzb.png?st=2024-09-30T03%3A17%3A43Z&amp;se=2024-09-30T05%3A17%3A43Z&amp;sp=r&amp;sv=2024-08-04&amp;sr=b&amp;rscd=inline&amp;rsct=image/png&amp;skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&amp;sktid=a48cca56-e6da-484e-a814-9c849652bcb3&amp;skt=2024-09-30T01%3A56%3A38Z&amp;ske=2024-10-01T01%3A56%3A38Z&amp;sks=b&amp;skv=2024-08-04&amp;sig=IIeke7btDndNQmPSx3mpFZ9QAhBjxmox0uW8QT6zYZA%3D" width="400"/>
+     <div class="p-4">
+      <h4 class="text-xl font-bold">
+       Cursos de Computación
+      </h4>
+     </div>
+     <div class="absolute inset-0 bg-white bg-opacity-50 p-4 service-info">
+      <h4 class="text-xl font-bold">
+       Cursos de Computación
+      </h4>
+      <p class="mt-2 text-gray-600">
+       Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque in veniam libero odio, itaque pariatur, minus doloremque est debitis cumque sint nisi id, quam assumenda! Aspernatur eum natus magni impedit.
+      </p>
+      <button class="mt-4 bg-blue-500 text-white px-4 py-2 rounded">
+       ¿Deseas agendar una cita?
+      </button>
+     </div>
+    </div>
+    <div class="bg-white shadow-md rounded-lg overflow-hidden service-card cursor-pointer relative">
+     <img alt="Personas haciendo manualidades" class="w-full h-48 object-cover" height="300" src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-RcpoXHkzChYnDbFAyeQ8tamr/user-ehrvabJ3DufsCu8YJ7PqY5gl/img-guNKAwI37LpQjagAPIXqlMo5.png?st=2024-09-30T03%3A19%3A33Z&amp;se=2024-09-30T05%3A19%3A33Z&amp;sp=r&amp;sv=2024-08-04&amp;sr=b&amp;rscd=inline&amp;rsct=image/png&amp;skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&amp;sktid=a48cca56-e6da-484e-a814-9c849652bcb3&amp;skt=2024-09-30T01%3A38%3A34Z&amp;ske=2024-10-01T01%3A38%3A34Z&amp;sks=b&amp;skv=2024-08-04&amp;sig=2nZXXd%2B95erY5/Ilw7GLLQ5DTtlMY1uUEpXP94EiNcQ%3D" width="400"/>
+     <div class="p-4">
+      <h4 class="text-xl font-bold">
+       Manualidades
+      </h4>
+
+     </div>
+     <div class="absolute inset-0 bg-white bg-opacity-90 p-4 service-info">
+      <h4 class="text-xl font-bold">
+       Manualidades
+      </h4>
+      <p class="mt-2 text-gray-600">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque in veniam libero odio, itaque pariatur, minus doloremque est debitis cumque sint nisi id, quam assumenda! Aspernatur eum natus magni impedit.
+       </p>
+       <button class="mt-4 bg-blue-500 text-white px-4 py-2 rounded">
+        ¿Deseas agendar una cita?
+       </button>
+      
     
-</body>
+     </div>
+    </div>
+   </div>
+  </div>
+ </body>
 </html>
