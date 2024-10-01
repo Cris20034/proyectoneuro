@@ -509,50 +509,55 @@ function submitTestimonial() {
       alert("Por favor, completa la calificación y el testimonio antes de enviar.");
   }
 }
+let slotsAvailable = 15;
+
 function showSchedule() {
-    var selectDay = document.getElementById('select-day');
-    var schedule = document.getElementById('schedule');
-    if (selectDay.value !== '--Seleccione un día--') {
-        schedule.classList.remove('hidden');
+    const scheduleDiv = document.getElementById('schedule');
+    const selectedDay = document.getElementById('select-day').value;
+    const message = document.getElementById('message');
+
+    if (selectedDay === '--Seleccione un día--') {
+        scheduleDiv.classList.add('hidden');
+        message.classList.add('hidden');
     } else {
-        schedule.classList.add('hidden');
+        scheduleDiv.classList.remove('hidden');
+        message.classList.add('hidden');
+
+        // Simular disponibilidad
+        if (slotsAvailable <= 0) {
+            message.classList.remove('hidden');
+            slotsAvailable = 0;
+        } else {
+            message.classList.add('hidden');
+        }
     }
 }
 
-function openModal(title, message, confirmText, cancelText) {
-    document.getElementById('confirmationModal').style.display = 'block';
-    document.getElementById('modal-title').innerText = title;
-    document.getElementById('modal-message').innerText = message;
-    document.getElementById('confirm-button').innerText = confirmText;
-    document.getElementById('cancel-button').innerText = cancelText;
-}
-
-function closeModal() {
-    document.getElementById('confirmationModal').style.display = 'none';
+function openModal() {
+    const modal = document.getElementById('confirmationModal');
+    modal.style.display = 'block';
 }
 
 function confirmAppointment() {
-    closeModal();
-    document.getElementById('success-message').classList.remove('hidden');
-    document.getElementById('success-message').innerText = 'Cita agendada exitosamente';
+    const name = document.getElementById('name').value;
+    const surname = document.getElementById('surname').value;
+    const email = document.getElementById('email').value;
+    const phone = document.getElementById('phone').value;
+
+    if (name && surname && email && phone) {
+        slotsAvailable--;
+        document.getElementById('success-message').textContent = `Cita agendada para ${name} ${surname}`;
+        document.getElementById('success-message').classList.remove('hidden');
+        document.getElementById('no-slots-message').classList.add('hidden');
+        document.getElementById('confirmationModal').style.display = 'none';
+        document.getElementById('schedule').classList.add('hidden');
+        document.getElementById('select-day').selectedIndex = 0;
+        document.getElementById('message').classList.add('hidden');
+    } else {
+        alert('Por favor completa todos los campos');
+    }
 }
 
 function cancelAppointment() {
-    closeModal();
-    document.getElementById('select-day').value = '--Seleccione un día--';
-    document.getElementById('name').value = '';
-    document.getElementById('surname').value = '';
-    document.getElementById('email').value = '';
-    document.getElementById('phone').value = '';
-    document.getElementById('schedule').classList.add('hidden');
+    document.getElementById('confirmationModal').style.display = 'none';
 }
-
-document.getElementById('book-button').addEventListener('click', function() {
-    openModal('Confirmar Cita', '¿Estás seguro de que deseas agendar esta cita?', 'Confirmar', 'Cancelar');
-    document.getElementById('confirm-button').addEventListener('click', confirmAppointment);
-    document.getElementById('cancel-button').addEventListener('click', cancelAppointment);
-});
-
-
-
-
