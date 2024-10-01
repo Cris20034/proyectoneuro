@@ -1,0 +1,185 @@
+
+.container_cuadros_informacion_sistema {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.cuadro {
+  flex: 0 0 calc(33.33% - 20px);
+  padding: 20px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.cuadro h4 {
+  margin-bottom: 10px;
+}
+
+/* Media query para pantallas pequeñas */
+@media (max-width: 767px) {
+  .container_cuadros_inicio,
+  .container_cuadros_informacion_sistema {
+    flex-direction: column;
+  }
+}
+
+/*___________________________*/
+/* Estilos para el menú lateral */
+.menu_lateral_inicio {
+  width: 20%; /* Ocupar todo el ancho en pantallas pequeñas */
+  padding: 20px;
+ 
+}
+
+.box_inicio{
+  padding: 5px;
+}
+
+
+
+/* Estilos para pantallas grandes */
+@media (min-width: 768px) {
+  .menu_lateral_inicio {
+    /* Estilos para el menú lateral en pantallas grandes */
+    width: 20%; /* Ancho del menú lateral */
+    float: left; /* Colocar a la izquierda */
+  }
+
+  .container_cuadros_inicio {
+    /* Estilos para el contenedor de cuadros en pantallas grandes */
+    margin-left: 20%; /* Margen a la izquierda para dejar espacio al menú lateral */
+  }
+}
+
+/* Estilos para pantallas pequeñas */
+@media (max-width: 767px) {
+  .menu_lateral_inicio {
+    /* Estilos para el menú lateral en pantallas pequeñas */
+    width: 100%; /* Ancho completo */
+    float: none; /* Quitar flotado */
+  }
+
+  .container_cuadros_inicio {
+    /* Estilos para el contenedor de cuadros en pantallas pequeñas */
+    margin-left: 0; /* Eliminar margen izquierdo */
+  }
+}
+
+/*_______________________________________________*/
+.contenedor_boxes {
+  display: flex;
+  justify-content: space-between; /* Distribuye los elementos con espacio entre ellos */
+  flex-wrap: wrap; /* Envuelve los elementos en una nueva línea si no caben en el contenedor */
+  max-width: auto; /* Ancho máximo del contenedor */
+  margin: 0 auto; /* Centra el contenedor */
+ 
+}
+
+.box_inicio {
+  /* Estilos para cada box */
+  display: flex;
+  align-items: center;
+  background-color: #000000;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  flex: 1 0 calc(33.333% - 20px); /* Distribuye el espacio disponible entre los boxes */
+  margin-left: 20px; /* Espacio entre los boxes */
+  margin-bottom: 20px;
+}
+
+/* Estilos restantes para .box_inicio según los proporcionados */
+
+
+.box_inicio:hover {
+ 
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Sombra más profunda al pasar el ratón por encima */
+}
+
+.box_inicio i {
+  font-size: 26px; /* Tamaño del icono ligeramente mayor */
+  color: #007bff; /* Color del icono */
+  margin-right: 15px; /* Espacio mayor entre el icono y el texto */
+}
+
+.box_inicio p {
+  margin: 0; /* Eliminar margen del párrafo */
+  font-size: 16px; /* Tamaño de la fuente */
+  color: #333; /* Color del texto */
+  line-height: 1.4; /* Altura de línea para mejor legibilidad */
+}
+
+.box_inicio b {
+  font-weight: bold; /* Negrita para el contador de visitas */
+  color: #007bff; /* Color del contador de visitas */
+}
+
+/* Media query para pantallas pequeñas */
+@media (max-width: 600px) {
+  .box_inicio {
+    flex-direction: column; /* Cambiar a columna en pantallas pequeñas */
+    align-items: flex-start; /* Alinear elementos al inicio */
+    padding: 10px 15px; /* Reducir espaciado interno */
+  }
+
+  .box_inicio i {
+    margin-right: 0; /* Eliminar margen derecho del icono */
+    margin-bottom: 10px; /* Agregar margen inferior al icono */
+  }
+}
+
+
+/*___________________________________________*/
+.container_cuadros_inicio {
+  display: flex;
+  flex-direction: column;
+  background-color: #393939;
+  color: rgb(255, 255, 255);
+  padding: 50px;
+  margin-left: 30px;
+  margin-right: 30px;
+ 
+}
+
+.container_cuadros_inicio h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.descripcion, .comenzar, .caracteristicas-beneficios, .tutorial, .noticias {
+  margin-bottom: 30px;
+}
+
+.descripcion h4, .comenzar h4, .caracteristicas h4, .beneficios h4, .tutorial h4, .noticias h4 {
+  color: #333;
+}
+
+.descripcion p {
+  line-height: 1.6;
+}
+
+.comenzar img {
+
+  max-width: 150px;
+}
+
+.caracteristicas ul, .beneficios ul, .noticias ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.tutorial, .noticias {
+  font-style: italic;
+}
+
+.caracteristicas-beneficios {
+  display: flex;
+}
+
+.caracteristicas, .beneficios {
+  flex: 1;
+  margin-right: 20px;
+}

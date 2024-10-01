@@ -1,0 +1,263 @@
+
+
+/* Estilos para navegadores basados en WebKit (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+  width: 15px; /* Ancho de la barra de desplazamiento vertical */
+  height: 12px; /* Altura de la barra de desplazamiento horizontal */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #888; /* Color del pulgar de la barra de desplazamiento */
+  border-radius: 50px; /* Redondear los bordes del pulgar */
+  border: 3px solid transparent; /* Espacio alrededor del pulgar para asegurar el redondeo */
+  background-clip: content-box; /* Ajusta el fondo para que respete el borde */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #555; /* Color del pulgar cuando se pasa el ratón por encima */
+}
+
+::-webkit-scrollbar-track {
+  background-color: #000000; /* Color de la pista de la barra de desplazamiento */
+  border-radius: 50px; /* Redondear los bordes de la pista */
+  margin: 4px; /* Espacio alrededor de la pista */
+}
+
+
+
+
+
+/*______________________Tablas ___________________________*/
+/* Estilos para la tabla */
+.tabla_basica {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+  background-color: #ffffff; /* Fondo blanco */
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: 1px solid #e0e0e0; /* Borde gris claro */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Sombra suave */
+}
+
+.tabla_basica th, 
+.tabla_basica td {
+  border: 1px solid #e0e0e0; /* Borde gris claro */
+  padding: 12px; /* Espaciado interior */
+  text-align: left;
+}
+
+.tabla_basica th {
+  background-color: #c0c0c0; /* gris */
+  color:black; /* Texto blanco */
+  font-weight: bold;
+  padding: 12px;
+}
+
+.tabla_basica tr:nth-child(even) {
+  background-color: #f2f2f2; /* Gris claro para filas pares */
+}
+
+.tabla_basica tr:hover {
+  background-color: #e0f2f1; /* Color de fondo al pasar el mouse */
+}
+
+/* Estilos para el contenedor */
+.contenedor_tabla_basica {
+  max-width: 100%;
+  overflow: auto;
+  border: 1px solid #e0e0e0;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+
+
+/* Media query para ajustar el ancho de la tabla en pantallas pequeñas */
+@media only screen and (max-width: 600px) {
+  .tabla_basica {
+      width: auto; /* Cambiar a ancho automático en pantallas pequeñas */
+  }
+}
+
+
+/*_____________________<!-- Añadir CSS para soportar submenús -->*/
+
+  .dropdown-submenu {
+    position: relative;
+  }
+
+  .dropdown-submenu .dropdown-menu {
+    top: 0;
+    left: 100%;
+    margin-top: -1px;
+  }
+/*_____________________________________________________*/
+body {
+  background: #393939;
+  text-align: justify; /* Justificar el texto en todo el cuerpo */
+}
+
+header {
+  padding: 20px;
+  background-color: #000000;
+ 
+  position: fixed;
+  width: 100%;
+  top: 0; /* Asegura que el encabezado esté en la parte superior */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra en el margen inferior */
+}
+/* Estilos para el contenedor principal */
+main {
+  margin-top: 70px; /* Margen superior igual a la altura del encabezado */
+  display: flex;
+  flex-direction: column; /* Ordena los elementos en columna */
+  background-color: #3f3f3f;
+}
+
+
+/* Estilos para el footer */
+footer {
+  background-color: #ff0303;
+  border-top: 2px solid #8d8c8c; /* Borde negro alrededor del formulario */
+ 
+  color: rgb(255, 254, 254); /* Color del texto */
+  text-align: center; /* Alineación del texto */
+}
+
+label {
+  font-size: 14px;
+}
+
+/* Tamaño de letra de 14 para todos los <textarea> */
+textarea {
+  font-size: 14px;
+}
+
+p {
+  font-size: 14px;
+  text-align: justify;
+  line-height: 1.5; /* Interlineado de 1.5 */
+}
+
+select {
+  font-size: 14px;
+}
+
+input {
+  font-size: 14px;
+}
+
+ul {
+  font-size: 14px;
+}
+
+li {
+  font-size: 14px;
+}
+
+div {
+  font-size: 14px;
+}
+
+
+
+
+/*_______________________________________NAV_______________________________________________________*/
+/* Estilos para el navbar personalizado */
+.navbar-custom {
+  border-color: rgb(0, 0, 0); /* Color del borde del navbar */
+  color: rgb(255, 255, 255); /* Color del texto de los items del menú desplegable */
+  height: 40px; /* Reducir la altura del navbar */
+  font-size: 16px;
+  
+ 
+ 
+}
+/* Espacio entre los ítems */
+.navbar-custom .navbar-nav li {
+  margin-right: 30px; /* Ajusta el valor según sea necesario */
+  background-color: #080808;
+  border-radius: 10px;
+  color: #ffffff;
+}
+/* Estilos para los ítems del navbar */
+.navbar-custom .nav-link {
+  transition: background-color 0.3s ease; /* Transición suave para el cambio de color */
+  font-size: 16px;
+  color: #ffffff;
+}
+/* Estilos para los ítems del navbar */
+.navbar-custom .navbar-nav {
+  width: 100%;
+  justify-content: center; /* Centrar los elementos horizontalmente */
+  align-items: center;
+  background:rgb(0, 0, 0);
+  font-size: 16px;
+  color: rgb(255, 255, 255);
+  border-radius: 10px;
+}
+/* Cambio de color al pasar el mouse por encima de los ítems */
+.navbar-custom .nav-link:hover {
+  background-color: #dfdfe0; /* Nuevo color de fondo al pasar el mouse por encima */
+  font-size: 16px;
+  border-radius: 10px;
+  color: rgb(255, 255, 255);
+}
+
+/* Estilos para el botón de hamburguesa */
+.navbar-toggler {
+  border: none; /* Quita el borde del botón */
+  height: auto;
+  background-color: #020202; /* Color del icono del botón de hamburguesa */
+  font-size: 16px;
+ 
+}
+
+/* Estilo para el icono del botón de hamburguesa */
+.navbar-toggler-icon {
+  background-color: #f90909; /* Color del icono del botón de hamburguesa */
+  font-size: 16px;
+}
+
+/* Estilo para la barra de despliegue del botón de hamburguesa */
+.navbar-toggler-bar {
+  background-color: #000000; /* Color de la barra de despliegue */
+}
+
+/* Estilo para el botón de hamburguesa cuando está activo */
+.navbar-toggler.active .navbar-toggler-bar {
+  background-color: #fb2020; /* Color de la barra de despliegue cuando el botón está activo */
+}
+.dropdown-menu{
+border-radius: 10px;
+background-color: #000000;
+
+}
+/* Estilos para los ítems del menú desplegable */
+.navbar-custom .navbar-collapse .navbar-nav .dropdown-menu .dropdown-item {
+  font-size: 16px;
+  color: rgb(255, 255, 255); /* Color del texto de los items del menú desplegable */
+  background-color: #000000;
+  border-radius: 10px;
+ 
+}
+
+/* Estilos para los ítems del menú desplegable al pasar el mouse por encima */
+.navbar-custom .navbar-collapse .navbar-nav .dropdown-menu .dropdown-item:hover {
+  background-color: #b4b4b4; /* Nuevo color de fondo al pasar el mouse por encima */
+}
+
+/* Estilo para el icono del botón de hamburguesa */
+.navbar-toggler-icon {
+  background-color: #050505; /* Color del icono del botón de hamburguesa */
+  width: 20px; /* Ancho del icono */
+  height: 20px; /* Altura del icono */
+}
+
+/* Estilo para la barra de despliegue del botón de hamburguesa */
+.navbar-toggler-bar {
+  background-color: #000000; /* Color de la barra de despliegue */
+  width: 20px; /* Ancho de la barra de despliegue */
+  height: 20px; /* Altura de la barra de despliegue */
+}

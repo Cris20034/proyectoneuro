@@ -1,0 +1,44 @@
+/* Estilos para el formulario de inicio de sesión */
+.form_login {
+  max-width: 40%;
+  margin: 0 auto; /* Alinear el formulario en el centro de la página */
+  padding: 30px; /* Espaciado interno */
+  background-color: #ffffff; /* Color de fondo */
+  border: 2px solid #dddddd; /* Borde */
+  border-radius: 5px; /* Bordes redondeados */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra */
+  align-items: center;
+}
+
+/* Estilos para los campos de entrada */
+.form_login input[type="email"],
+.form_login input[type="password"] {
+  width: 90%; /* Ancho completo */
+  padding: 12px; /* Espaciado interno */
+  margin-bottom: 20px; /* Espacio inferior */
+  border: 1px solid #ccc; /* Borde */
+  border-radius: 4px; /* Bordes redondeados */
+  box-sizing: border-box; /* Incluir borde y relleno en el ancho */
+}
+
+/* Estilos para el botón de envío del formulario */
+.form_login input[type="submit"] {
+  background-color: #057b9c; /* Color de fondo */
+  color: #fff; /* Color del texto */
+  border: none; /* Sin borde */
+  border-radius: 4px; /* Bordes redondeados */
+  cursor: pointer; /* Cursor de puntero */
+  padding: 12px 20px; /* Espaciado interno */
+  font-size: 14px; /* Tamaño de fuente */
+
+}
+
+/* Estilos para el botón "Olvidé mi contraseña" */
+.form_login .forgot-password-button {
+  background-color: transparent; /* Botón transparente */
+  color: #005c7a; /* Color del texto */
+  border: none; /* Sin borde */
+  cursor: pointer; /* Cursor de puntero */
+}
+
+
