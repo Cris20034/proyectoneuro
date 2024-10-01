@@ -95,12 +95,8 @@ body{
     .header label {
         display: initial;
     }
-.Menu{
-    display: none;
-}
-
     .menu {
-        display: none;
+        display: block;
     }
     .header {
         padding: 20px 10%;
