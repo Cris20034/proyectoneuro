@@ -6,6 +6,121 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Panel Administrativo</title>
     <link rel="stylesheet" href="../css/dashboard.css">
+<<<<<<< Updated upstream
+=======
+    <style>
+        /* Estilo para ocultar el contenido por defecto */
+        .content {
+            display: none;
+            padding: 20px;
+            border: 1px solid #ccc;
+            margin-top: 10px;
+            background-color: #f9f9f9; /* Color de fondo claro */
+            border-radius: 8px; /* Bordes redondeados */
+        }
+        .content h2 {
+            color: #333; /* Color del título */
+        }
+        .content p {
+            color: #555; /* Color del texto */
+            line-height: 1.6; /* Espaciado entre líneas */
+        }
+        .content ul {
+            list-style-type: disc; /* Estilo de lista */
+            margin-left: 20px; /* Sangría */
+        }
+        .content .highlight {
+            color: #0056b3; /* Color destacado para secciones importantes */
+            font-weight: bold; /* Negrita */
+        }
+        .content .footer {
+            margin-top: 20px; /* Margen superior para el pie de página */
+            font-style: italic; /* Estilo de texto en cursiva */
+            color: #777; /* Color del pie de página */
+        }
+        /* Estilos de la tabla */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #007bff; /* Color de fondo del encabezado */
+            color: white; /* Color del texto del encabezado */
+        }
+        /* Estilos para el banner */
+        .banner {
+            background-color: #007bff; /* Color de fondo del banner */
+            color: white; /* Color del texto del banner */
+            padding: 50px 20px;
+            text-align: center;
+            margin-bottom: 20px; /* Margen inferior del banner */
+        }
+        .banner h1 {
+            margin: 0;
+            font-size: 2.5em; /* Tamaño del título */
+        }
+        .banner p {
+            font-size: 1.2em; /* Tamaño del texto */
+            margin-top: 10px;
+        }
+        /* Estilos para la galería */
+        .gallery {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-top: 20px; /* Margen superior de la galería */
+        }
+        .gallery img {
+            width: 30%; /* Ancho de las imágenes */
+            border-radius: 8px; /* Bordes redondeados */
+            margin-bottom: 20px; /* Margen inferior de las imágenes */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra de las imágenes */
+        }
+        /* Estilos para los servicios destacados */
+        .services {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px; /* Margen superior de los servicios */
+        }
+        .service {
+            background-color: #f1f1f1; /* Color de fondo del servicio */
+            padding: 20px;
+            border-radius: 8px; /* Bordes redondeados */
+            text-align: center; /* Alineación del texto */
+            flex: 1; /* Flexibilidad de los servicios */
+            margin: 10px; /* Margen entre servicios */
+        }
+        .service h3 {
+            margin: 0; /* Margen del título del servicio */
+        }
+
+        /* Estilos específicos para Tareas Asistidas */
+        #tareas {
+            margin-top: 20px; /* Margen superior para separar del resto del contenido */
+            padding: 20px; /* Espaciado interno */
+            border: 1px solid #ccc; /* Borde alrededor de la sección */
+            background-color: #eef2f7; /* Fondo más claro para destacarlo */
+            border-radius: 8px; /* Bordes redondeados */
+        }
+        #tareas h2 {
+            color: #333; /* Color del título */
+        }
+        #tareas p {
+            color: #555; /* Color del texto */
+            margin-bottom: 10px; /* Margen inferior */
+        }
+        #tareas ul {
+            margin-left: 20px; /* Margen izquierdo para lista */
+            color: #333; /* Color del texto en la lista */
+        }
+    </style>
+>>>>>>> Stashed changes
 </head>
 <body>
     <header class="header">
@@ -58,6 +173,77 @@
             </ul>
         </nav>
     </header>
+<<<<<<< Updated upstream
 <div class="hero"></div>
 </body>
 </html>
+=======
+
+    <div class="hero"></div>
+
+    <!-- Contenido del Inicio -->
+    <div class="banner">
+        <h1>Bienvenido al Panel Administrativo</h1>
+        <p>Descubre nuestros servicios y programas diseñados para ayudarte a alcanzar tus objetivos.</p>
+    </div>
+
+    <div class="content" id="inicio">
+        <h2>Nuestros Servicios</h2>
+        <div class="services">
+            <div class="service">
+                <h3>Asesoramiento Personalizado</h3>
+                <p>Brindamos asesoramiento individual para potenciar tus habilidades y talentos.</p>
+            </div>
+            <div class="service">
+                <h3>Clases Interactivas</h3>
+                <p>Participa en clases interactivas que facilitan el aprendizaje.</p>
+            </div>
+            <div class="service">
+                <h3>Soporte 24/7</h3>
+                <p>Contamos con un equipo disponible para resolver tus dudas y consultas.</p>
+            </div>
+        </div>
+
+        <h2>Galería de Imágenes</h2>
+        <div class="gallery">
+            <img src="../images/servicio1.jpg" alt="Servicio 1">
+            <img src="../images/servicio2.jpg" alt="Servicio 2">
+            <img src="../images/servicio3.jpg" alt="Servicio 3">
+        </div>
+    </div>
+
+<!-- Contenido de Tareas Asistidas -->
+<div class="content" id="tareas" style="max-width: 800px; margin: 0 auto; padding: 20px;">
+    <h2>Tareas Asistidas</h2>
+    <p>En nuestro programa de Tareas Asistidas, ayudamos a los estudiantes a completar sus deberes de manera eficiente y con apoyo personalizado.</p>
+    <ul>
+        <li>Ayuda en matemáticas, ciencias, y más.</li>
+        <li>Orientación en técnicas de estudio.</li>
+        <li>Ambiente de aprendizaje adecuado.</li>
+    </ul>
+
+    <!-- Ejemplo de tabla dentro de "Tareas Asistidas" -->
+    <table>
+        <thead>
+            <tr>
+                <th>Materia</th>
+                <th>Día</th>
+                <th>Hora</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Matemáticas</td>
+                <td>Lunes</td>
+                <td>10:00 AM</td>
+            </tr>
+            <tr>
+                <td>Ciencias</td>
+                <td>Martes</td>
+                <td>11:00 AM</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+>
+>>>>>>> Stashed changes
