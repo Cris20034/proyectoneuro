@@ -2,12 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible"content="IE=edge">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Panel Administrativo</title>
     <link rel="stylesheet" href="../css/dashboard.css">
-<<<<<<< Updated upstream
-=======
     <style>
         /* Estilo para ocultar el contenido por defecto */
         .content {
@@ -120,23 +118,24 @@
             color: #333; /* Color del texto en la lista */
         }
     </style>
->>>>>>> Stashed changes
 </head>
 <body>
     <header class="header">
         <div class="logo">Panel Administrativo</div>
-        <imput type="checkbox" id="toggle"></imput>
+        <input type="checkbox" id="toggle"></input>
         <label for="toggle"> <img class="menu" src="../images/menu-hamburguesa.png" alt="menu"> </label>
         <nav class="navigation">
             <ul>
-                <li><a href="#">Inicio</a></li>
+                <li><a href="admin_panel.html" onclick="resetPage()">Inicio</a></li>
                 <li><a href="#">Servicios</a>
                     <ul>
                         <li><a href="yoga_admin.html">Yoga</a></li>
-                        <li><a href="#">Curso de Computacion</a></li>
-                        <li><a href="#">Bailoterapia</a></li>
-                        <li><a href="#">Tareas asistidas</a></li>
-                        <li><a href="#">Estiramientos</a>
+                        <li><a href="Cursos_de_computacion_admin.html">Curso de Computacion</a></li>
+                        <li><a href="bailoterapia_admin.html">Bailoterapia</a></li>
+                        <li><a href="Tareas_asistidas_admin.html" onclick="showContent('tareas')">Tareas Asistidas</a></li>
+                        <li><a href="Estiramiento_admin.html">Estiramientos</a></li>
+                        <li>
+                            <a href="#">Cursos</a>
                             <ul>
                                 <li><a href="#">Curso A</a></li>
                                 <li><a href="#">Curso B</a></li>
@@ -148,7 +147,7 @@
                 </li>
                 <li><a href="#">Horarios</a>
                     <ul>
-                        <li><a href="#">Horaio dia Lunes</a></li>
+                        <li><a href="#">Horario dia Lunes</a></li>
                         <li><a href="#">Horario dia ....</a></li>
                         <li><a href="#">Horario dia ....</a></li>
                         <li><a href="#">Horario dia ....</a>
@@ -166,18 +165,13 @@
                         <li><a href="#">Yoga</a></li>
                         <li><a href="#">Curso de Computacion</a></li>
                         <li><a href="#">Bailoterapia</a></li>
-                        <li><a href="#">Tareas asistidas</a>
+                        <li><a href="#">Tareas asistidas</a></li>
                         <li><a href="#">Estiramientos</a></li>
                     </ul>
                 </li>
             </ul>
         </nav>
     </header>
-<<<<<<< Updated upstream
-<div class="hero"></div>
-</body>
-</html>
-=======
 
     <div class="hero"></div>
 
@@ -212,38 +206,15 @@
         </div>
     </div>
 
-<!-- Contenido de Tareas Asistidas -->
-<div class="content" id="tareas" style="max-width: 800px; margin: 0 auto; padding: 20px;">
-    <h2>Tareas Asistidas</h2>
-    <p>En nuestro programa de Tareas Asistidas, ayudamos a los estudiantes a completar sus deberes de manera eficiente y con apoyo personalizado.</p>
-    <ul>
-        <li>Ayuda en matemáticas, ciencias, y más.</li>
-        <li>Orientación en técnicas de estudio.</li>
-        <li>Ambiente de aprendizaje adecuado.</li>
-    </ul>
-
-    <!-- Ejemplo de tabla dentro de "Tareas Asistidas" -->
-    <table>
-        <thead>
-            <tr>
-                <th>Materia</th>
-                <th>Día</th>
-                <th>Hora</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Matemáticas</td>
-                <td>Lunes</td>
-                <td>10:00 AM</td>
-            </tr>
-            <tr>
-                <td>Ciencias</td>
-                <td>Martes</td>
-                <td>11:00 AM</td>
-            </tr>
-        </tbody>
-    </table>
-</div>
->
->>>>>>> Stashed changes
+    <!-- Contenido de Tareas Asistidas -->
+    <div class="content" id="tareas">
+        <h2>Tareas Asistidas</h2>
+        <p>En nuestro programa de Tareas Asistidas, ayudamos a los estudiantes a completar sus deberes de manera eficiente y con apoyo personalizado.</p>
+        <ul>
+            <li>Ayuda en matemáticas, ciencias, y más.</li>
+            <li>Orientación en técnicas de estudio.</li>
+            <li>Ambiente de aprendizaje adecuado.</li>
+        </ul>
+    </div>
+</body>
+</html>
