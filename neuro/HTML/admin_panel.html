@@ -7,78 +7,143 @@
     <title>Panel Administrativo</title>
     <link rel="stylesheet" href="../css/dashboard.css">
     <style>
-        /* Estilo para ocultar el contenido por defecto */
+        /* Estilo por defecto para ocultar el contenido */
         .content {
             display: none;
             padding: 20px;
+            margin-top: 10px;
+        }
+
+        /* Estilo para la sección Inicio */
+        #inicio {
+            margin: 20px auto;
+            padding: 30px;
             border: 1px solid #ccc;
-            margin-top: 10px;
-            background-color: #f9f9f9; /* Color de fondo claro */
-            border-radius: 8px; /* Bordes redondeados */
-        }
-        .content h2 {
-            color: #333; /* Color del título */
-        }
-        .content p {
-            color: #555; /* Color del texto */
-            line-height: 1.6; /* Espaciado entre líneas */
-        }
-        .content ul {
-            list-style-type: disc; /* Estilo de lista */
-            margin-left: 20px; /* Sangría */
-        }
-        .content .highlight {
-            color: #0056b3; /* Color destacado para secciones importantes */
-            font-weight: bold; /* Negrita */
-        }
-        .content .footer {
-            margin-top: 20px; /* Margen superior para el pie de página */
-            font-style: italic; /* Estilo de texto en cursiva */
-            color: #777; /* Color del pie de página */
-        }
-        /* Estilos para el banner */
-        .banner {
-            background-color: #007bff; /* Color de fondo del banner */
-            color: white; /* Color del texto del banner */
-            padding: 50px 20px;
+            background-color: #e3f2fd; /* Color específico para Inicio */
+            border-radius: 8px;
+            max-width: 800px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
             text-align: center;
-            margin-bottom: 20px; /* Margen inferior del banner */
         }
-        .banner h1 {
-            margin: 0;
-            font-size: 2.5em; /* Tamaño del título */
+
+        /* Estilo para la sección Tareas Asistidas */
+        #tareas-asistidas {
+            margin: 20px auto;
+            padding: 30px;
+            border: 1px solid #ccc;
+            background-color: #fff3e0; /* Color específico para Tareas Asistidas */
+            border-radius: 8px;
+            max-width: 800px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
         }
-        .banner p {
-            font-size: 1.2em; /* Tamaño del texto */
-            margin-top: 10px;
+
+        /* Estilo para la sección Yoga */
+        #yoga {
+            margin: 20px auto;
+            padding: 30px;
+            border: 1px solid #ccc;
+            background-color: #ffebee; /* Color específico para Yoga */
+            border-radius: 8px;
+            max-width: 800px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
         }
-        /* Estilos para la galería */
-        .gallery {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-            margin-top: 20px; /* Margen superior de la galería */
+
+        /* Estilo para la sección Cursos de Computación */
+        #cursos-computacion {
+            margin: 20px auto;
+            padding: 30px;
+            border: 1px solid #ccc;
+            background-color: #f3e5f5; /* Color específico para Computación */
+            border-radius: 8px;
+            max-width: 800px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
         }
-        .gallery .programas {
-            display: inline-block; /* Hacer que los programas estén uno al lado del otro */
-            padding: 10px;
-            background-color: #ffffff; /* Color de fondo blanco para los programas */
-            border-radius: 5px; /* Bordes redondeados */
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra sutil */
-            margin: 10px; /* Margen entre programas */
-            text-align: left; /* Alinear el texto a la izquierda */
-            width: 220px; /* Ancho fijo para los bloques de programas */
+
+        /* Estilo para la sección Bailoterapia */
+        #bailoterapia {
+            margin: 20px auto;
+            padding: 30px;
+            border: 1px solid #ccc;
+            background-color: #e8f5e9; /* Color específico para Bailoterapia */
+            border-radius: 8px;
+            max-width: 800px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
         }
-        /* Estilo para el contenido del inicio y tareas asistidas */
-        #inicio, #tareas-asistidas, #yoga, #cursos-computacion, #bailoterapia, #estiramientos, #curso-a, #curso-b, #curso-c, #curso-d {
-            margin: 20px auto; /* Margen automático a los lados */
-            padding: 30px; /* Aumenta el espaciado interno */
-            border: 1px solid #ccc; /* Borde alrededor de la sección */
-            background-color: white; /* Cambiar a fondo blanco */
-            border-radius: 8px; /* Bordes redondeados */
-            max-width: 800px; /* Ancho máximo de la sección */
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
-            text-align: center; /* Centrar el contenido */
+
+        /* Estilo para la sección Estiramientos */
+        #estiramientos {
+            margin: 20px auto;
+            padding: 30px;
+            border: 1px solid #ccc;
+            background-color: #fbe9e7; /* Color específico para Estiramientos */
+            border-radius: 8px;
+            max-width: 800px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        /* Estilo para la sección Cursos */
+        #cursos {
+            margin: 20px auto;
+            padding: 30px;
+            border: 1px solid #ccc;
+            background-color: #f9fbe7; /* Color específico para Cursos */
+            border-radius: 8px;
+            max-width: 800px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        /* Estilo para Curso A */
+        #curso-a {
+            margin: 20px auto;
+            padding: 30px;
+            border: 1px solid #ccc;
+            background-color: #fffde7; /* Color específico para Curso A */
+            border-radius: 8px;
+            max-width: 800px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        /* Estilo para Curso B */
+        #curso-b {
+            margin: 20px auto;
+            padding: 30px;
+            border: 1px solid #ccc;
+            background-color: #e1f5fe; /* Color específico para Curso B */
+            border-radius: 8px;
+            max-width: 800px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        /* Estilo para Curso C */
+        #curso-c {
+            margin: 20px auto;
+            padding: 30px;
+            border: 1px solid #ccc;
+            background-color: #f9fbe7; /* Color específico para Curso C */
+            border-radius: 8px;
+            max-width: 800px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        /* Estilo para Curso D */
+        #curso-d {
+            margin: 20px auto;
+            padding: 30px;
+            border: 1px solid #ccc;
+            background-color: #ffebee; /* Color específico para Curso D */
+            border-radius: 8px;
+            max-width: 800px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
         }
 
         /* Estilo para centrar el contenido de toda la página */
@@ -86,19 +151,20 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            flex-direction: column; /* Apilar el contenido verticalmente */
-            min-height: 100vh; /* Altura mínima para llenar toda la ventana */
-            margin: 0; /* Quitar márgenes */
-            background-color: #f0f0f0; /* Color de fondo claro para toda la página */
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
         }
 
-        #inicio h2, #tareas-asistidas h2, #yoga h2, #cursos-computacion h2, #bailoterapia h2, #estiramientos h2, #curso-a h2, #curso-b h2, #curso-c h2, #curso-d h2 {
-            color: #333; /* Color del título */
-            margin-bottom: 20px; /* Margen inferior del título */
+        .content h2 {
+            color: #333;
+            margin-bottom: 20px;
         }
-        #inicio p, #tareas-asistidas p, #yoga p, #cursos-computacion p, #bailoterapia p, #estiramientos p, #curso-a p, #curso-b p, #curso-c p, #curso-d p {
-            color: #555; /* Color del texto */
-            margin-bottom: 15px; /* Margen inferior */
+
+        .content p {
+            color: #555;
+            margin-bottom: 15px;
         }
     </style>
 </head>
@@ -115,7 +181,7 @@
                         <li><a href="#" onclick="showContent('yoga')">Yoga</a></li>
                         <li><a href="#" onclick="showContent('cursos-computacion')">Curso de Computación</a></li>
                         <li><a href="#" onclick="showContent('bailoterapia')">Bailoterapia</a></li>
-                        <li><a href="#" onclick="showContent('tareas-asistidas')">Tareas Asistidas</a></li> <!-- Se agregó la función para mostrar -->
+                        <li><a href="#" onclick="showContent('tareas-asistidas')">Tareas Asistidas</a></li>
                         <li><a href="#" onclick="showContent('estiramientos')">Estiramientos</a></li>
                         <li>
                             <a href="#" onclick="showContent('cursos')">Cursos</a>
@@ -128,54 +194,15 @@
                         </li>
                     </ul>
                 </li>
-                <li><a href="#">Horarios</a>
-                    <ul>
-                        <li><a href="#">Horario dia Lunes</a></li>
-                        <li><a href="#">Horario dia ....</a></li>
-                        <li><a href="#">Horario dia ....</a></li>
-                        <li><a href="#">Horario dia ....</a>
-                            <ul>
-                                <li><a href="#">Curso A</a></li>
-                                <li><a href="#">Curso B</a></li>
-                                <li><a href="#">Curso C</a></li>
-                                <li><a href="#">Curso D</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </li>
-                <li><a href="#">Cupos</a>
-                    <ul>
-                        <li><a href="#">Yoga</a></li>
-                        <li><a href="#">Curso de Computación</a></li>
-                        <li><a href="#">Bailoterapia</a></li>
-                        <li><a href="#">Estiramientos</a></li>
-                    </ul>
-                </li>
+                <li><a href="#">Horarios</a></li>
+                <li><a href="#">Cupos</a></li>
             </ul>
         </nav>
     </header>
 
     <div id="inicio" class="content">
-        <div class="banner">
-            <h1>Bienvenido al Panel</h1>
-            <p>Administra tus actividades de forma eficiente.</p>
-        </div>
         <h2>Inicio</h2>
         <p>Este es el contenido del inicio.</p>
-        <div class="gallery">
-            <div class="programas">
-                <h3>Programa 1</h3>
-                <p>Descripción del Programa 1.</p>
-            </div>
-            <div class="programas">
-                <h3>Programa 2</h3>
-                <p>Descripción del Programa 2.</p>
-            </div>
-            <div class="programas">
-                <h3>Programa 3</h3>
-                <p>Descripción del Programa 3.</p>
-            </div>
-        </div>
     </div>
 
     <div id="tareas-asistidas" class="content">
@@ -185,17 +212,17 @@
 
     <div id="yoga" class="content">
         <h2>Yoga</h2>
-        <p>Detalles sobre las clases de yoga.</p>
+        <p>Información sobre las clases de Yoga.</p>
     </div>
 
     <div id="cursos-computacion" class="content">
         <h2>Cursos de Computación</h2>
-        <p>Detalles sobre los cursos de computación disponibles.</p>
+        <p>Detalles sobre los cursos de computación.</p>
     </div>
 
     <div id="bailoterapia" class="content">
         <h2>Bailoterapia</h2>
-        <p>Descripción de las clases de bailoterapia.</p>
+        <p>Detalles sobre las clases de bailoterapia.</p>
     </div>
 
     <div id="estiramientos" class="content">
@@ -204,7 +231,7 @@
     </div>
 
     <div id="cursos" class="content">
-        <h2>Cursos</h2>
+        <h2>Cursos Disponibles</h2>
         <p>Selecciona un curso para ver más detalles:</p>
         <ul>
             <li><a href="#" onclick="showContent('curso-a')">Curso A</a></li>
@@ -217,29 +244,21 @@
     <div id="curso-a" class="content">
         <h2>Curso A</h2>
         <p>Detalles sobre el Curso A.</p>
-        <p class="highlight">Este curso es ideal para principiantes.</p>
-        <p class="footer">No te pierdas esta oportunidad.</p>
     </div>
 
     <div id="curso-b" class="content">
         <h2>Curso B</h2>
         <p>Detalles sobre el Curso B.</p>
-        <p class="highlight">Este curso es avanzado.</p>
-        <p class="footer">¡Inscríbete hoy mismo!</p>
     </div>
 
     <div id="curso-c" class="content">
         <h2>Curso C</h2>
         <p>Detalles sobre el Curso C.</p>
-        <p class="highlight">Curso intermedio.</p>
-        <p class="footer">¡Aprende nuevas habilidades!</p>
     </div>
 
     <div id="curso-d" class="content">
         <h2>Curso D</h2>
         <p>Detalles sobre el Curso D.</p>
-        <p class="highlight">Curso para expertos.</p>
-        <p class="footer">¡Desafía tus límites!</p>
     </div>
 
     <script>
