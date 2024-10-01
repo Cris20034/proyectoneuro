@@ -8,8 +8,12 @@
     list-style: none;
     font-family:'Poppins', 'sans-serif';
 }
+body{
+    min-height: 100vh;
+    box-sizing: border-box;
+}
 .container{
-    max-width: 1200px;
+    max-width: 3000px;
     margin: 0 auto;
 }
 
