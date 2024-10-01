@@ -95,6 +95,9 @@ body{
     .header label {
         display: initial;
     }
+.Menu{
+    display: none;
+}
 
     .header{
         padding: 20px 10%;
@@ -106,7 +109,7 @@ body{
         left: 0;
         right: 0;
         background-color: rgba(1, 1, 1, 0.7);
-        display: flex;
+        display: none;
     }
 
     .header .navigation ul li {
@@ -138,6 +141,7 @@ body{
 }
 
 }
+
 .hero {
     min-height: 100vh;
     background-image: url("../images/PortadaPanel.jpg");
@@ -236,4 +240,3 @@ body{
   .login-btn:hover {
     background-color: #13b6d3;
   }
-  
