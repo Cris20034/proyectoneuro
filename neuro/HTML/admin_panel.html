@@ -2,26 +2,120 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible"content="IE=edge">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Panel Administrativo</title>
     <link rel="stylesheet" href="../css/dashboard.css">
+    <style>
+        /* Estilo para ocultar el contenido por defecto */
+        .content {
+            display: none;
+            padding: 20px;
+            border: 1px solid #ccc;
+            margin-top: 10px;
+            background-color: #f9f9f9; /* Color de fondo claro */
+            border-radius: 8px; /* Bordes redondeados */
+        }
+        .content h2 {
+            color: #333; /* Color del título */
+        }
+        .content p {
+            color: #555; /* Color del texto */
+            line-height: 1.6; /* Espaciado entre líneas */
+        }
+        .content ul {
+            list-style-type: disc; /* Estilo de lista */
+            margin-left: 20px; /* Sangría */
+        }
+        .content .highlight {
+            color: #0056b3; /* Color destacado para secciones importantes */
+            font-weight: bold; /* Negrita */
+        }
+        .content .footer {
+            margin-top: 20px; /* Margen superior para el pie de página */
+            font-style: italic; /* Estilo de texto en cursiva */
+            color: #777; /* Color del pie de página */
+        }
+        /* Estilos de la tabla */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #007bff; /* Color de fondo del encabezado */
+            color: white; /* Color del texto del encabezado */
+        }
+        /* Estilos para el banner */
+        .banner {
+            background-color: #007bff; /* Color de fondo del banner */
+            color: white; /* Color del texto del banner */
+            padding: 50px 20px;
+            text-align: center;
+            margin-bottom: 20px; /* Margen inferior del banner */
+        }
+        .banner h1 {
+            margin: 0;
+            font-size: 2.5em; /* Tamaño del título */
+        }
+        .banner p {
+            font-size: 1.2em; /* Tamaño del texto */
+            margin-top: 10px;
+        }
+        /* Estilos para la galería */
+        .gallery {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-top: 20px; /* Margen superior de la galería */
+        }
+        .gallery img {
+            width: 30%; /* Ancho de las imágenes */
+            border-radius: 8px; /* Bordes redondeados */
+            margin-bottom: 20px; /* Margen inferior de las imágenes */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra de las imágenes */
+        }
+        /* Estilos para los servicios destacados */
+        .services {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px; /* Margen superior de los servicios */
+        }
+        .service {
+            background-color: #f1f1f1; /* Color de fondo del servicio */
+            padding: 20px;
+            border-radius: 8px; /* Bordes redondeados */
+            text-align: center; /* Alineación del texto */
+            flex: 1; /* Flexibilidad de los servicios */
+            margin: 10px; /* Margen entre servicios */
+        }
+        .service h3 {
+            margin: 0; /* Margen del título del servicio */
+        }
+    </style>
 </head>
 <body>
     <header class="header">
         <div class="logo">Panel Administrativo</div>
-        <imput type="checkbox" id="toggle"></imput>
+        <input type="checkbox" id="toggle"></input>
         <label for="toggle"> <img class="menu" src="../images/menu-hamburguesa.png" alt="menu"> </label>
         <nav class="navigation">
             <ul>
-                <li><a href="#">Inici2o</a></li>
+                <li><a href="#" onclick="resetPage()">Inicio</a></li>
                 <li><a href="#">Servicios</a>
                     <ul>
-                        <li><a href="#">Yoga</a></li>
+                        <li><a href="yoga_admin.html">Yoga</a></li>
                         <li><a href="#">Curso de Computacion</a></li>
                         <li><a href="#">Bailoterapia</a></li>
-                        <li><a href="#">Tareas asistidas</a></li>
-                        <li><a href="#">Estiramientos</a>
+                        <li><a href="#" onclick="showContent('tareas')">Tareas Asistidas</a></li>
+                        <li><a href="#">Estiramientos</a></li>
+                        <li>
+                            <a href="#">Cursos</a>
                             <ul>
                                 <li><a href="#">Curso A</a></li>
                                 <li><a href="#">Curso B</a></li>
@@ -33,7 +127,7 @@
                 </li>
                 <li><a href="#">Horarios</a>
                     <ul>
-                        <li><a href="#">Horaio dia Lunes</a></li>
+                        <li><a href="#">Horario dia Lunes</a></li>
                         <li><a href="#">Horario dia ....</a></li>
                         <li><a href="#">Horario dia ....</a></li>
                         <li><a href="#">Horario dia ....</a>
@@ -51,13 +145,120 @@
                         <li><a href="#">Yoga</a></li>
                         <li><a href="#">Curso de Computacion</a></li>
                         <li><a href="#">Bailoterapia</a></li>
-                        <li><a href="#">Tareas asistidas</a>
+                        <li><a href="#">Tareas asistidas</a></li>
                         <li><a href="#">Estiramientos</a></li>
                     </ul>
                 </li>
             </ul>
         </nav>
     </header>
-<div class="hero"></div>
+
+    <div class="hero"></div>
+
+    <!-- Contenido del Inicio -->
+    <div class="banner">
+        <h1>Bienvenido al Panel Administrativo</h1>
+        <p>Descubre nuestros servicios y programas diseñados para ayudarte a alcanzar tus objetivos.</p>
+    </div>
+
+    <div class="content" id="inicio">
+        <h2>Nuestros Servicios</h2>
+        <div class="services">
+            <div class="service">
+                <h3>Asesoramiento Personalizado</h3>
+                <p>Brindamos asesoramiento individual para potenciar tus habilidades y talentos.</p>
+            </div>
+            <div class="service">
+                <h3>Clases Interactivas</h3>
+                <p>Participa en clases interactivas que facilitan el aprendizaje.</p>
+            </div>
+            <div class="service">
+                <h3>Soporte 24/7</h3>
+                <p>Contamos con un equipo disponible para resolver tus dudas y consultas.</p>
+            </div>
+        </div>
+
+        <h2>Galería de Imágenes</h2>
+        <div class="gallery">
+            <img src="../images/servicio1.jpg" alt="Servicio 1">
+            <img src="../images/servicio2.jpg" alt="Servicio 2">
+            <img src="../images/servicio3.jpg" alt="Servicio 3">
+        </div>
+    </div>
+
+    <!-- Contenido mejorado para Tareas Asistidas -->
+    <div id="tareas" class="content">
+        <h2>Tareas Asistidas</h2>
+        <p>En nuestra sección de <span class="highlight">Tareas Asistidas</span>, ofrecemos un amplio rango de servicios diseñados para ayudar a los estudiantes a alcanzar sus metas académicas y personales.</p>
+        <p>Los programas están diseñados para ser flexibles y adaptados a las necesidades individuales de cada estudiante, asegurando que cada uno pueda progresar a su propio ritmo.</p>
+        
+        <h3>Servicios Ofrecidos:</h3>
+        <ul>
+            <li>Asesoramiento personalizado en temas académicos.</li>
+            <li>Sesiones de estudio grupales.</li>
+            <li>Ayuda con la gestión del tiempo y técnicas de estudio.</li>
+            <li>Recursos educativos adicionales.</li>
+            <li>Apoyo emocional y motivacional.</li>
+        </ul>
+        
+        <h3>Programas Disponibles:</h3>
+        <table>
+            <tr>
+                <th>Código</th>
+                <th>Descripción</th>
+                <th>Duración</th>
+                <th>Costo</th>
+            </tr>
+            <tr>
+                <td>Apoyo Académico</td>
+                <td>Sesiones personalizadas para mejorar el rendimiento académico.</td>
+                <td>1 mes</td>
+                <td>$100</td>
+            </tr>
+            <tr>
+                <td>Gestión del Tiempo</td>
+                <td>Técnicas para optimizar el tiempo de estudio y trabajo.</td>
+                <td>2 semanas</td>
+                <td>$75</td>
+            </tr>
+            <tr>
+                <td>Clases de Reforzamiento</td>
+                <td>Refuerzo en asignaturas específicas según necesidades.</td>
+                <td>3 meses</td>
+                <td>$250</td>
+            </tr>
+        </table>
+        
+        <h3>Selecciona un Programa:</h3>
+        <select>
+            <option value="">Seleccione un programa</option>
+            <option value="apoyo">Apoyo Académico</option>
+            <option value="gestion">Gestión del Tiempo</option>
+            <option value="refuerzo">Clases de Reforzamiento</option>
+        </select>
+        
+        <div class="footer">Para más información, contáctanos.</div>
+    </div>
+
+    <script>
+        function showContent(contentId) {
+            // Ocultar todos los contenidos
+            var contents = document.querySelectorAll('.content');
+            contents.forEach(function(content) {
+                content.style.display = 'none';
+            });
+            // Mostrar el contenido seleccionado
+            document.getElementById(contentId).style.display = 'block';
+        }
+
+        function resetPage() {
+            // Mostrar el contenido de Inicio y ocultar otros
+            var contents = document.querySelectorAll('.content');
+            contents.forEach(function(content) {
+                content.style.display = 'none';
+            });
+            document.getElementById('inicio').style.display = 'block';
+        }
+    </script>
 </body>
 </html>
