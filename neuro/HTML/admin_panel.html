@@ -36,21 +36,6 @@
             font-style: italic; /* Estilo de texto en cursiva */
             color: #777; /* Color del pie de página */
         }
-        /* Estilos de la tabla */
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-        }
-        th, td {
-            border: 1px solid #ccc;
-            padding: 10px;
-            text-align: left;
-        }
-        th {
-            background-color: #007bff; /* Color de fondo del encabezado */
-            color: white; /* Color del texto del encabezado */
-        }
         /* Estilos para el banner */
         .banner {
             background-color: #007bff; /* Color de fondo del banner */
@@ -74,55 +59,35 @@
             flex-wrap: wrap;
             margin-top: 20px; /* Margen superior de la galería */
         }
-        .gallery img {
-            width: 30%; /* Ancho de las imágenes */
-            border-radius: 8px; /* Bordes redondeados */
-            margin-bottom: 20px; /* Margen inferior de las imágenes */
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra de las imágenes */
+        .gallery .programas {
+            display: inline-block; /* Hacer que los programas estén uno al lado del otro */
+            padding: 10px;
+            background-color: #ffffff; /* Color de fondo blanco para los programas */
+            border-radius: 5px; /* Bordes redondeados */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+            margin: 10px; /* Margen entre programas */
+            text-align: left; /* Alinear el texto a la izquierda */
+            width: 220px; /* Ancho fijo para los bloques de programas */
         }
-        /* Estilos para los servicios destacados */
-        .services {
-            display: flex;
-            justify-content: space-around;
-            margin-top: 20px; /* Margen superior de los servicios */
-        }
-        .service {
-            background-color: #f1f1f1; /* Color de fondo del servicio */
-            padding: 20px;
-            border-radius: 8px; /* Bordes redondeados */
-            text-align: center; /* Alineación del texto */
-            flex: 1; /* Flexibilidad de los servicios */
-            margin: 10px; /* Margen entre servicios */
-        }
-        .service h3 {
-            margin: 0; /* Margen del título del servicio */
-        }
-
-        /* Estilos específicos para Tareas Asistidas */
-        #tareas {
-            margin: 40px 60px; /* Aumenta el margen superior e inferior, y el lateral */
-            padding: 40px; /* Aumenta el espaciado interno */
+        /* Estilo para el contenido del inicio */
+        #inicio {
+            margin: 40px auto; /* Margen automático a los lados */
+            padding: 30px; /* Aumenta el espaciado interno */
             border: 1px solid #ccc; /* Borde alrededor de la sección */
-            background-color: #eef2f7; /* Fondo más claro para destacarlo */
+            background-color: #eef2f7; /* Fondo celeste */
             border-radius: 8px; /* Bordes redondeados */
+            max-width: 800px; /* Ancho máximo de la sección */
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+            text-align: center; /* Centrar el contenido */
         }
-
-        #tareas h2 {
-            margin-bottom: 20px; /* Aumenta el espacio inferior del título */
+        #inicio h2 {
+            color: #333; /* Color del título */
+            margin-bottom: 20px; /* Margen inferior del título */
         }
-
-        #tareas p {
-            margin-bottom: 20px; /* Aumenta el espacio inferior entre párrafos */
+        #inicio p {
+            color: #555; /* Color del texto */
+            margin-bottom: 15px; /* Margen inferior */
         }
-
-        #tareas ul {
-            margin-left: 40px; /* Aumenta el margen de la lista */
-        }
-
-        table {
-            margin-top: 20px; /* Aumenta la separación entre la tabla y el contenido anterior */
-}
-
     </style>
 </head>
 <body>
@@ -138,7 +103,7 @@
                         <li><a href="yoga_admin.html">Yoga</a></li>
                         <li><a href="Cursos_de_computacion_admin.html">Curso de Computacion</a></li>
                         <li><a href="bailoterapia_admin.html">Bailoterapia</a></li>
-                        <li><a href="Tareas_asistidas_admin.html" onclick="showContent('tareas')">Tareas Asistidas</a></li>
+                        <li><a href="#">Tareas Asistidas</a></li> <!-- Eliminado el enlace a la página -->
                         <li><a href="Estiramiento_admin.html">Estiramientos</a></li>
                         <li>
                             <a href="#">Cursos</a>
@@ -171,7 +136,6 @@
                         <li><a href="#">Yoga</a></li>
                         <li><a href="#">Curso de Computacion</a></li>
                         <li><a href="#">Bailoterapia</a></li>
-                        <li><a href="#">Tareas asistidas</a></li>
                         <li><a href="#">Estiramientos</a></li>
                     </ul>
                 </li>
@@ -189,39 +153,22 @@
 
     <div class="content" id="inicio">
         <h2>Nuestros Servicios</h2>
-        <div class="services">
-            <div class="service">
-                <h3>Asesoramiento Personalizado</h3>
-                <p>Brindamos asesoramiento individual para potenciar tus habilidades y talentos.</p>
-            </div>
-            <div class="service">
-                <h3>Clases Interactivas</h3>
-                <p>Participa en clases interactivas que facilitan el aprendizaje.</p>
-            </div>
-            <div class="service">
-                <h3>Soporte 24/7</h3>
-                <p>Contamos con un equipo disponible para resolver tus dudas y consultas.</p>
-            </div>
-        </div>
-
-        <h2>Galería de Imágenes</h2>
-        <div class="gallery">
-            <img src="../images/servicio1.jpg" alt="Servicio 1">
-            <img src="../images/servicio2.jpg" alt="Servicio 2">
-            <img src="../images/servicio3.jpg" alt="Servicio 3">
-        </div>
+        <p>Brindamos asesoramiento individual para potenciar tus habilidades y talentos.</p>
     </div>
 
-    <!-- Contenido de Tareas Asistidas -->
-    <div class="content" id="tareas">
-        <h2>Tareas Asistidas</h2>
-        <p>En nuestro programa de Tareas Asistidas, ayudamos a los estudiantes a completar sus deberes de manera eficiente y con apoyo personalizado.</p>
-        <ul>
-            <li>Ayuda en matemáticas, ciencias, y más.</li>
-            <li>Orientación en técnicas de estudio.</li>
-            <li>Ambiente de aprendizaje adecuado.</li>
-        </ul>
-    </div>
+    <script>
+        // Función para reiniciar la página
+        function resetPage() {
+            document.querySelectorAll('.content').forEach(function(content) {
+                content.style.display = 'none';
+            });
+            document.getElementById('inicio').style.display = 'block';
+        }
+
+        // Mostrar el contenido de inicio al cargar la página
+        window.onload = function() {
+            resetPage();
+        };
+    </script>
 </body>
 </html>
-
