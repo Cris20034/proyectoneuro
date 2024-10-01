@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -100,6 +101,7 @@
     </style>
 </head>
 <body>
+    
     <header class="header">
         <div class="logo">Panel Administrativo</div>
         <input type="checkbox" id="toggle"></input>
@@ -151,37 +153,83 @@
                 </li>
             </ul>
         </nav>
+        
     </header>
 
     <div class="hero"></div>
-
-    <!-- Contenido del Inicio -->
-    <div class="banner">
-        <h1>Bienvenido al Panel Administrativo</h1>
-        <p>Descubre nuestros servicios y programas diseñados para ayudarte a alcanzar tus objetivos.</p>
+    <div id="tareas" class="content"></div>
+        <h2>Tareas Asistidas</h2>
+        <p>En nuestra sección de <span class="highlight">Tareas Asistidas</span>, ofrecemos un amplio rango de servicios diseñados para ayudar a los estudiantes a alcanzar sus metas académicas y personales.</p>
+        <p>Los programas están diseñados para ser flexibles y adaptados a las necesidades individuales de cada estudiante, asegurando que cada uno pueda progresar a su propio ritmo.</p>
+        
+        <h3>Servicios Ofrecidos:</h3>
+        <ul>
+            <li>Asesoramiento personalizado en temas académicos.</li>
+            <li>Sesiones de estudio grupales.</li>
+            <li>Ayuda con la gestión del tiempo y técnicas de estudio.</li>
+            <li>Recursos educativos adicionales.</li>
+            <li>Apoyo emocional y motivacional.</li>
+        </ul>
+        
+        <h3>Programas Disponibles:</h3>
+        <table>
+            <tr>
+                <th>Código</th>
+                <th>Descripción</th>
+                <th>Cantidad</th>
+                <th>Precio Unitario</th>
+                <th>Precio Total</th>
+            </tr>
+            <tr>
+                <td>123</td>
+                <td>hojas de papel</td>
+                <td>3</td>
+                <td>0.10$</td>
+                <td>0.30$</td>
+            </tr>
+            <tr>
+                <td>Gestión del Tiempo</td>
+                <td>Técnicas para optimizar el tiempo de estudio y trabajo.</td>
+                <td>2 semanas</td>
+                <td>$75</td>
+            </tr>
+            <tr>
+                <td>Clases de Reforzamiento</td>
+                <td>Refuerzo en asignaturas específicas según necesidades.</td>
+                <td>3 meses</td>
+                <td>$250</td>
+            </tr>
+        </table>
+        
+        <h3>Selecciona un Programa:</h3>
+        <select>
+            <option value="">Seleccione el material</option>
+            <option value="apoyo">Hojas de papel</option>
+            <option value="gestion">Lapiz</option>
+            <option value="refuerzo">Colores</option>
+        </select>
+        
+        <div class="footer">Para más información, contáctanos.</div>
     </div>
+    <script>
+        function showContent(contentId) {
+            // Ocultar todos los contenidos
+            var contents = document.querySelectorAll('.content');
+            contents.forEach(function(content) {
+                content.style.display = 'none';
+            });
+            // Mostrar el contenido seleccionado
+            document.getElementById(contentId).style.display = 'block';
+        }
 
-    <div class="content" id="inicio">
-        <h2>Nuestros Servicios</h2>
-        <div class="services">
-            <div class="service">
-                <h3>Asesoramiento Personalizado</h3>
-                <p>Brindamos asesoramiento individual para potenciar tus habilidades y talentos.</p>
-            </div>
-            <div class="service">
-                <h3>Clases Interactivas</h3>
-                <p>Participa en clases interactivas que facilitan el aprendizaje.</p>
-            </div>
-            <div class="service">
-                <h3>Soporte 24/7</h3>
-                <p>Contamos con un equipo disponible para resolver tus dudas y consultas.</p>
-            </div>
-        </div>
-
-        <h2>Galería de Imágenes</h2>
-        <div class="gallery">
-            <img src="../images/servicio1.jpg" alt="Servicio 1">
-            <img src="../images/servicio2.jpg" alt="Servicio 2">
-            <img src="../images/servicio3.jpg" alt="Servicio 3">
-        </div>
-    </div>
+        function resetPage() {
+            // Mostrar el contenido de Inicio y ocultar otros
+            var contents = document.querySelectorAll('.content');
+            contents.forEach(function(content) {
+                content.style.display = 'none';
+            });
+            document.getElementById('inicio').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
