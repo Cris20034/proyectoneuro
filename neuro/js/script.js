@@ -509,3 +509,50 @@ function submitTestimonial() {
       alert("Por favor, completa la calificación y el testimonio antes de enviar.");
   }
 }
+function showSchedule() {
+    var selectDay = document.getElementById('select-day');
+    var schedule = document.getElementById('schedule');
+    if (selectDay.value !== '--Seleccione un día--') {
+        schedule.classList.remove('hidden');
+    } else {
+        schedule.classList.add('hidden');
+    }
+}
+
+function openModal(title, message, confirmText, cancelText) {
+    document.getElementById('confirmationModal').style.display = 'block';
+    document.getElementById('modal-title').innerText = title;
+    document.getElementById('modal-message').innerText = message;
+    document.getElementById('confirm-button').innerText = confirmText;
+    document.getElementById('cancel-button').innerText = cancelText;
+}
+
+function closeModal() {
+    document.getElementById('confirmationModal').style.display = 'none';
+}
+
+function confirmAppointment() {
+    closeModal();
+    document.getElementById('success-message').classList.remove('hidden');
+    document.getElementById('success-message').innerText = 'Cita agendada exitosamente';
+}
+
+function cancelAppointment() {
+    closeModal();
+    document.getElementById('select-day').value = '--Seleccione un día--';
+    document.getElementById('name').value = '';
+    document.getElementById('surname').value = '';
+    document.getElementById('email').value = '';
+    document.getElementById('phone').value = '';
+    document.getElementById('schedule').classList.add('hidden');
+}
+
+document.getElementById('book-button').addEventListener('click', function() {
+    openModal('Confirmar Cita', '¿Estás seguro de que deseas agendar esta cita?', 'Confirmar', 'Cancelar');
+    document.getElementById('confirm-button').addEventListener('click', confirmAppointment);
+    document.getElementById('cancel-button').addEventListener('click', cancelAppointment);
+});
+
+
+
+

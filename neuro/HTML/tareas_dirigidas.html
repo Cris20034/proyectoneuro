@@ -1,4 +1,5 @@
-<html lang="es"></html>
+<!DOCTYPE html>
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,55 +11,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        body {
-            font-family: 'Roboto', sans-serif;
-        }
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 50;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            overflow: auto;
-            background-color: rgba(0, 0, 0, 0.4);
-        }
-        .modal-content {
-            background-color: #fefefe;
-            margin: 15% auto;
-            padding: 20px;
-            border: 1px solid #888;
-            width: 80%;
-            max-width: 400px;
-            border-radius: 10px;
-        }
-        .fade-in {
-            animation: fadeIn 1s ease-in-out;
-        }
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 1;
-            }
-        }
-        .slide-in {
-            animation: slideIn 1s ease-in-out;
-        }
-        @keyframes slideIn {
-            from {
-                transform: translateY(50px);
-                opacity: 0;
-            }
-            to {
-                transform: translateY(0);
-                opacity: 1;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="../css/modal.css"> <!-- Vinculando CSS separado -->
 </head>
 <body class="bg-gradient-to-r from-green-100 to-blue-200 flex flex-col items-center justify-center min-h-screen fade-in">
     <header class="w-full">
@@ -143,36 +96,7 @@
         </div>
     </div>
 
-    <script>
-        function showSchedule() {
-            document.getElementById('schedule').classList.remove('hidden');
-        }
-
-        function openModal() {
-            document.getElementById('confirmationModal').style.display = 'block';
-        }
-
-        function closeModal() {
-            document.getElementById('confirmationModal').style.display = 'none';
-        }
-
-        function confirmAppointment() {
-            closeModal();
-            document.getElementById('success-message').classList.remove('hidden');
-            document.getElementById('success-message').innerText = 'Cita agendada exitosamente';
-        }
-
-        function cancelAppointment() {
-            closeModal();
-            document.getElementById('select-day').value = '--Seleccione un día--';
-            document.getElementById('name').value = '';
-            document.getElementById('surname').value = '';
-            document.getElementById('email').value = '';
-            document.getElementById('phone').value = '';
-            document.getElementById('schedule').classList.add('hidden');
-        }
-    </script>
-    <script src="../js/script.js"></script>
+    <script src="../js/script.js"></script> <!-- Vinculando JavaScript separado -->
     <footer>
         <script type="text/javascript">
             (function(d, t) {
