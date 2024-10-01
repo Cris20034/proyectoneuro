@@ -69,22 +69,34 @@
             text-align: left; /* Alinear el texto a la izquierda */
             width: 220px; /* Ancho fijo para los bloques de programas */
         }
-        /* Estilo para el contenido del inicio */
-        #inicio {
-            margin: 40px auto; /* Margen automático a los lados */
+        /* Estilo para el contenido del inicio y tareas asistidas */
+        #inicio, #tareas-asistidas, #yoga, #cursos-computacion, #bailoterapia, #estiramientos, #curso-a, #curso-b, #curso-c, #curso-d {
+            margin: 20px auto; /* Margen automático a los lados */
             padding: 30px; /* Aumenta el espaciado interno */
             border: 1px solid #ccc; /* Borde alrededor de la sección */
-            background-color: #eef2f7; /* Fondo celeste */
+            background-color: white; /* Cambiar a fondo blanco */
             border-radius: 8px; /* Bordes redondeados */
             max-width: 800px; /* Ancho máximo de la sección */
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
             text-align: center; /* Centrar el contenido */
         }
-        #inicio h2 {
+
+        /* Estilo para centrar el contenido de toda la página */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column; /* Apilar el contenido verticalmente */
+            min-height: 100vh; /* Altura mínima para llenar toda la ventana */
+            margin: 0; /* Quitar márgenes */
+            background-color: #f0f0f0; /* Color de fondo claro para toda la página */
+        }
+
+        #inicio h2, #tareas-asistidas h2, #yoga h2, #cursos-computacion h2, #bailoterapia h2, #estiramientos h2, #curso-a h2, #curso-b h2, #curso-c h2, #curso-d h2 {
             color: #333; /* Color del título */
             margin-bottom: 20px; /* Margen inferior del título */
         }
-        #inicio p {
+        #inicio p, #tareas-asistidas p, #yoga p, #cursos-computacion p, #bailoterapia p, #estiramientos p, #curso-a p, #curso-b p, #curso-c p, #curso-d p {
             color: #555; /* Color del texto */
             margin-bottom: 15px; /* Margen inferior */
         }
@@ -97,21 +109,21 @@
         <label for="toggle"> <img class="menu" src="../images/menu-hamburguesa.png" alt="menu"> </label>
         <nav class="navigation">
             <ul>
-                <li><a href="admin_panel.html" onclick="resetPage()">Inicio</a></li>
+                <li><a href="#" onclick="showContent('inicio')">Inicio</a></li>
                 <li><a href="#">Servicios</a>
                     <ul>
-                        <li><a href="yoga_admin.html">Yoga</a></li>
-                        <li><a href="Cursos_de_computacion_admin.html">Curso de Computacion</a></li>
-                        <li><a href="bailoterapia_admin.html">Bailoterapia</a></li>
-                        <li><a href="#">Tareas Asistidas</a></li> <!-- Eliminado el enlace a la página -->
-                        <li><a href="Estiramiento_admin.html">Estiramientos</a></li>
+                        <li><a href="#" onclick="showContent('yoga')">Yoga</a></li>
+                        <li><a href="#" onclick="showContent('cursos-computacion')">Curso de Computación</a></li>
+                        <li><a href="#" onclick="showContent('bailoterapia')">Bailoterapia</a></li>
+                        <li><a href="#" onclick="showContent('tareas-asistidas')">Tareas Asistidas</a></li> <!-- Se agregó la función para mostrar -->
+                        <li><a href="#" onclick="showContent('estiramientos')">Estiramientos</a></li>
                         <li>
-                            <a href="#">Cursos</a>
+                            <a href="#" onclick="showContent('cursos')">Cursos</a>
                             <ul>
-                                <li><a href="#">Curso A</a></li>
-                                <li><a href="#">Curso B</a></li>
-                                <li><a href="#">Curso C</a></li>
-                                <li><a href="#">Curso D</a></li>
+                                <li><a href="#" onclick="showContent('curso-a')">Curso A</a></li>
+                                <li><a href="#" onclick="showContent('curso-b')">Curso B</a></li>
+                                <li><a href="#" onclick="showContent('curso-c')">Curso C</a></li>
+                                <li><a href="#" onclick="showContent('curso-d')">Curso D</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -134,7 +146,7 @@
                 <li><a href="#">Cupos</a>
                     <ul>
                         <li><a href="#">Yoga</a></li>
-                        <li><a href="#">Curso de Computacion</a></li>
+                        <li><a href="#">Curso de Computación</a></li>
                         <li><a href="#">Bailoterapia</a></li>
                         <li><a href="#">Estiramientos</a></li>
                     </ul>
@@ -143,32 +155,106 @@
         </nav>
     </header>
 
-    <div class="hero"></div>
-
-    <!-- Contenido del Inicio -->
-    <div class="banner">
-        <h1>Bienvenido al Panel Administrativo</h1>
-        <p>Descubre nuestros servicios y programas diseñados para ayudarte a alcanzar tus objetivos.</p>
+    <div id="inicio" class="content">
+        <div class="banner">
+            <h1>Bienvenido al Panel</h1>
+            <p>Administra tus actividades de forma eficiente.</p>
+        </div>
+        <h2>Inicio</h2>
+        <p>Este es el contenido del inicio.</p>
+        <div class="gallery">
+            <div class="programas">
+                <h3>Programa 1</h3>
+                <p>Descripción del Programa 1.</p>
+            </div>
+            <div class="programas">
+                <h3>Programa 2</h3>
+                <p>Descripción del Programa 2.</p>
+            </div>
+            <div class="programas">
+                <h3>Programa 3</h3>
+                <p>Descripción del Programa 3.</p>
+            </div>
+        </div>
     </div>
 
-    <div class="content" id="inicio">
-        <h2>Nuestros Servicios</h2>
-        <p>Brindamos asesoramiento individual para potenciar tus habilidades y talentos.</p>
+    <div id="tareas-asistidas" class="content">
+        <h2>Tareas Asistidas</h2>
+        <p>Descripción de las tareas asistidas.</p>
+    </div>
+
+    <div id="yoga" class="content">
+        <h2>Yoga</h2>
+        <p>Detalles sobre las clases de yoga.</p>
+    </div>
+
+    <div id="cursos-computacion" class="content">
+        <h2>Cursos de Computación</h2>
+        <p>Detalles sobre los cursos de computación disponibles.</p>
+    </div>
+
+    <div id="bailoterapia" class="content">
+        <h2>Bailoterapia</h2>
+        <p>Descripción de las clases de bailoterapia.</p>
+    </div>
+
+    <div id="estiramientos" class="content">
+        <h2>Estiramientos</h2>
+        <p>Información sobre las clases de estiramiento.</p>
+    </div>
+
+    <div id="cursos" class="content">
+        <h2>Cursos</h2>
+        <p>Selecciona un curso para ver más detalles:</p>
+        <ul>
+            <li><a href="#" onclick="showContent('curso-a')">Curso A</a></li>
+            <li><a href="#" onclick="showContent('curso-b')">Curso B</a></li>
+            <li><a href="#" onclick="showContent('curso-c')">Curso C</a></li>
+            <li><a href="#" onclick="showContent('curso-d')">Curso D</a></li>
+        </ul>
+    </div>
+
+    <div id="curso-a" class="content">
+        <h2>Curso A</h2>
+        <p>Detalles sobre el Curso A.</p>
+        <p class="highlight">Este curso es ideal para principiantes.</p>
+        <p class="footer">No te pierdas esta oportunidad.</p>
+    </div>
+
+    <div id="curso-b" class="content">
+        <h2>Curso B</h2>
+        <p>Detalles sobre el Curso B.</p>
+        <p class="highlight">Este curso es avanzado.</p>
+        <p class="footer">¡Inscríbete hoy mismo!</p>
+    </div>
+
+    <div id="curso-c" class="content">
+        <h2>Curso C</h2>
+        <p>Detalles sobre el Curso C.</p>
+        <p class="highlight">Curso intermedio.</p>
+        <p class="footer">¡Aprende nuevas habilidades!</p>
+    </div>
+
+    <div id="curso-d" class="content">
+        <h2>Curso D</h2>
+        <p>Detalles sobre el Curso D.</p>
+        <p class="highlight">Curso para expertos.</p>
+        <p class="footer">¡Desafía tus límites!</p>
     </div>
 
     <script>
-        // Función para reiniciar la página
-        function resetPage() {
-            document.querySelectorAll('.content').forEach(function(content) {
-                content.style.display = 'none';
+        function showContent(contentId) {
+            const contents = document.querySelectorAll('.content');
+            contents.forEach(content => {
+                content.style.display = 'none'; // Ocultar todos los contenidos
             });
-            document.getElementById('inicio').style.display = 'block';
+            document.getElementById(contentId).style.display = 'block'; // Mostrar el contenido específico
         }
 
-        // Mostrar el contenido de inicio al cargar la página
+        // Muestra el contenido del inicio por defecto al cargar la página
         window.onload = function() {
-            resetPage();
-        };
+            showContent('inicio');
+        }
     </script>
 </body>
 </html>
