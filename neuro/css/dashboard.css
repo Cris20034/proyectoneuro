@@ -143,7 +143,7 @@ body{
 
 .hero {
     min-height: 100vh;
-    background-image: url("../images/PortadaPanel.jpg");
+    background-color: lightskyblue;
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
