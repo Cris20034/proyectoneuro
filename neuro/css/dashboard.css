@@ -95,6 +95,9 @@ body{
     .header label {
         display: initial;
     }
+.Menu{
+    display: none;
+}
 
     .menu {
         display: none;
@@ -239,5 +242,4 @@ body{
   
   .login-btn:hover {
     background-color: #13b6d3;
-  }
-
+}
