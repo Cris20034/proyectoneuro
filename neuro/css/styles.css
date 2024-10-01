@@ -12,8 +12,16 @@ body{
     min-height: 100vh;
     box-sizing: border-box;
 }
+body{
+    min-height: 100vh;
+    box-sizing: border-box;
+}
 .container{
+<<<<<<< HEAD
     max-width: 4000px;
+=======
+    max-width: 3000px;
+>>>>>>> 7acb4d45f2a549118043116d005bca8d6dde82b0
     margin: 0 auto;
 }
 
