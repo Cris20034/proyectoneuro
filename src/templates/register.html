@@ -1,0 +1,116 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Register</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style/styleregister.css') }}">
+
+    <!-- Google Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Passion+One' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    
+    <style>
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row justify-content-center align-items-center">
+            <div class="col-md-6 main-login">
+                <img src="/static/img/logo.png" alt="Descripción de la imagen"  style="max-width: 200px;margin-right: 20px; margin-left:30%">
+                <h5 style="text-align: center;">Regístrese como nuevo usuario </h5>
+                <form action="{{ url_for('register') }}" method="post" autocomplete="off"> 
+                    <div class="form-row">
+                    <div class="form-group">
+                        <label for="nombres" class="cols-sm-2 control-label">Nombres</label>
+                        <div class="cols-sm-10">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+                                <input type="text" class="form-control" name="nombre" id="nombre"  placeholder="Introduzca su Nombre"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="apellidos" class="cols-sm-2 control-label">Apellidos</label>
+                        <div class="cols-sm-10">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+                                <input type="text" class="form-control" name="apellido" id="apellido"  placeholder="Introduzca su Nombre"/>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    </div>
+                    <div class="form-row">
+                    <div class="form-group">
+                        <label for="correo" class="cols-sm-2 control-label">Tu Correo Electrónico</label>
+                        <div class="cols-sm-10">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
+                                <input type="text" class="form-control" name="correo" id="correo"  placeholder="Introduzca su Correo Electrónico  "/>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="cedula" class="cols-sm-2 control-label">Numero de identificación o Cédula </label>
+                            <div class="cols-sm-10">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
+                                    <input type="text" class="form-control" name="cedula" id="cedula" placeholder="Introduzca su cédula" required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="telefono" class="cols-sm-2 control-label">Teléfono celular </label>
+                            <div class="cols-sm-10">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
+                                    <input type="text" class="form-control" name="telefono" id="telefono" placeholder="Introduzca su telefono" required>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                    <div class="form-group">
+                        <label for="contraseña" class="cols-sm-2 control-label">Contraseña</label>
+                        <div class="cols-sm-10">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+                                <input type="contraseña" class="form-control" name="contraseña"  id="contraseña" required  placeholder="Introduzca su Contraseña"/>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <p>Si deseas un código de Acceso solicítalo al número +593 968 681 964</p>
+
+                    <div class="form-group ">
+                        {% with messages = get_flashed_messages() %}
+                        {% if messages %}
+                        {% for message in messages %}
+                        <div class="alert alert-success alert-dismissible fade show" role="alert">
+                            {{ message }}
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">×</span>
+                            </button>
+                        </div>
+                        {% endfor %}
+                        {% endif %}
+                        {% endwith %}
+                        <input type="submit" value="Registrar" class="form-control btn btn-primary" name="">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+</body>
+</html>
+
+
