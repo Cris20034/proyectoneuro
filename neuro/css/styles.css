@@ -16,7 +16,19 @@ body{
     max-width: 3000px;
     margin: 0 auto;
 }
+#toggle-mode {
+    background-color: #444; /* Color de fondo del botón */
+    color: white; /* Color del texto del botón */
+    border: none; /* Sin borde */
+    padding: 10px 15px; /* Espaciado */
+    cursor: pointer; /* Cambia el cursor al pasar el ratón */
+    border-radius: 5px; /* Bordes redondeados */
+    transition: background-color 0.3s; /* Transición suave para el fondo */
+}
 
+#toggle-mode:hover {
+    background-color: #555; /* Color de fondo al pasar el ratón */
+}
 .header{
     background-image: linear-gradient(
         rgba(0,0,0,0.7),
@@ -38,26 +50,41 @@ body{
     right: 0;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
 }
 .logo{
     color: #fffdfc;
     font-size: 25px;
     font-weight: 800;
-    
+    margin-left: 28px;
 }
-.menu .navbar ul li{
+.menu .navbar {
+    display: flex;
+    flex: 1;              /* Habilita el flexbox en la barra de navegación */
+    justify-content: center;
+}
+
+.menu .navbar ul {
+    padding: 0;                /* Elimina el padding por defecto */
+    margin: 0;                 /* Elimina el margen por defecto */
+    list-style: none;          /* Elimina las viñetas de la lista */
+    display: flex;             /* Usa flexbox para alinear los elementos */
+}
+
+.menu .navbar ul li {
     position: relative;
-    float: left;
+    margin: 0 15px;           /* Espaciado entre los elementos */
 }
-.menu .navbar ul li a{
+
+.menu .navbar ul li a {
     font-size: 18px;
     padding: 20px;
     color: #fffdfc;
     display: block;
     font-weight: 600;
 }
-.menu .navbar ul li a:hover{
+
+.menu .navbar ul li a:hover {
     color: rgba(180, 120, 235, 0.438);
 }
 #menu{
@@ -582,4 +609,31 @@ body {
     box-shadow: 0px 0px 0px 3px rgba(0, 123, 255, 0.5); /* Añade un contorno suave al hacer clic */
 }
 
-
+/* Apartado de servicios Alex*/
+   .service-card {
+     transition: transform 0.3s ease-in-out;
+   }
+   .service-card:hover {
+     transform: scale(1.05);
+   }
+   .service-card:hover .service-info {
+     display: block;
+     animation: fadeIn 0.3s ease-in-out;
+   }
+   .service-info {
+     display: none;
+   }
+   .nuestro{
+    text-align: center;
+    font-size: 50;
+    font-weight: 700;
+    color: black;
+   }
+   @keyframes fadeIn {
+     from {
+       opacity: 0;
+     }
+     to {
+       opacity: 1;
+     }
+   }
