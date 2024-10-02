@@ -1,234 +1,162 @@
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Panel Administrativo</title>
-    <link rel="stylesheet" href="../css/dashboard.css">
-    <style>
-        /* Estilo para ocultar el contenido por defecto */
-        .content {
-            display: none;
-            padding: 20px;
-            border: 1px solid #ccc;
-            margin-top: 10px;
-            background-color: #f9f9f9; /* Color de fondo claro */
-            border-radius: 8px; /* Bordes redondeados */
-        }
-        .content h2 {
-            color: #333; /* Color del título */
-        }
-        .content p {
-            color: #555; /* Color del texto */
-            line-height: 1.6; /* Espaciado entre líneas */
-        }
-        .content ul {
-            list-style-type: disc; /* Estilo de lista */
-            margin-left: 20px; /* Sangría */
-        }
-        .content .highlight {
-            color: #0056b3; /* Color destacado para secciones importantes */
-            font-weight: bold; /* Negrita */
-        }
-        .content .footer {
-            margin-top: 20px; /* Margen superior para el pie de página */
-            font-style: italic; /* Estilo de texto en cursiva */
-            color: #777; /* Color del pie de página */
-        }
-        /* Estilos de la tabla */
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-        }
-        th, td {
-            border: 1px solid #ccc;
-            padding: 10px;
-            text-align: left;
-        }
-        th {
-            background-color: #007bff; /* Color de fondo del encabezado */
-            color: white; /* Color del texto del encabezado */
-        }
-        /* Estilos para el banner */
-        .banner {
-            background-color: #007bff; /* Color de fondo del banner */
-            color: white; /* Color del texto del banner */
-            padding: 50px 20px;
-            text-align: center;
-            margin-bottom: 20px; /* Margen inferior del banner */
-        }
-        .banner h1 {
-            margin: 0;
-            font-size: 2.5em; /* Tamaño del título */
-        }
-        .banner p {
-            font-size: 1.2em; /* Tamaño del texto */
-            margin-top: 10px;
-        }
-        /* Estilos para la galería */
-        .gallery {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-            margin-top: 20px; /* Margen superior de la galería */
-        }
-        .gallery img {
-            width: 30%; /* Ancho de las imágenes */
-            border-radius: 8px; /* Bordes redondeados */
-            margin-bottom: 20px; /* Margen inferior de las imágenes */
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra de las imágenes */
-        }
-        /* Estilos para los servicios destacados */
-        .services {
-            display: flex;
-            justify-content: space-around;
-            margin-top: 20px; /* Margen superior de los servicios */
-        }
-        .service {
-            background-color: #f1f1f1; /* Color de fondo del servicio */
-            padding: 20px;
-            border-radius: 8px; /* Bordes redondeados */
-            text-align: center; /* Alineación del texto */
-            flex: 1; /* Flexibilidad de los servicios */
-            margin: 10px; /* Margen entre servicios */
-        }
-        .service h3 {
-            margin: 0; /* Margen del título del servicio */
-        }
-    </style>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Citas - Neurovida</title>
+    <link rel="stylesheet" href="../css/styles.css"> <!-- Enlaza con el archivo CSS -->
+    <link rel="shortcut icon" href="images/favicon-32x32.png" type="image/x-icon">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    
+<body class="flex flex-col items-center justify-center min-h-screen fade-in">
+
+    <!-- Encabezado -->
     <header class="header">
-        <div class="logo">Panel Administrativo</div>
-        <input type="checkbox" id="toggle"></input>
-        <label for="toggle"> <img class="menu" src="../images/menu-hamburguesa.png" alt="menu"> </label>
-        <nav class="navigation">
-            <ul>
-                <li><a href="admin_panel.html" onclick="resetPage()">Inicio</a></li>
-                <li><a href="#">Servicios</a>
-                    <ul>
-                        <li><a href="yoga_admin.html">Yoga</a></li>
-                        <li><a href="Cursos_de_computacion_admin.html">Curso de Computacion</a></li>
-                        <li><a href="bailoterapia_admin.html">Bailoterapia</a></li>
-                        <li><a href="Tareas_asistidas_admin.html" onclick="showContent('tareas')">Tareas Asistidas</a></li>
-                        <li><a href="Estiramiento_admin.html">Estiramientos</a></li>
-                        <li>
-                            <a href="#">Cursos</a>
-                            <ul>
-                                <li><a href="#">Curso A</a></li>
-                                <li><a href="#">Curso B</a></li>
-                                <li><a href="#">Curso C</a></li>
-                                <li><a href="#">Curso D</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </li>
-                <li><a href="#">Horarios</a>
-                    <ul>
-                        <li><a href="#">Horario dia Lunes</a></li>
-                        <li><a href="#">Horario dia ....</a></li>
-                        <li><a href="#">Horario dia ....</a></li>
-                        <li><a href="#">Horario dia ....</a>
-                            <ul>
-                                <li><a href="#">Curso A</a></li>
-                                <li><a href="#">Curso B</a></li>
-                                <li><a href="#">Curso C</a></li>
-                                <li><a href="#">Curso D</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </li>
-                <li><a href="#">Cupos</a>
-                    <ul>
-                        <li><a href="#">Yoga</a></li>
-                        <li><a href="#">Curso de Computacion</a></li>
-                        <li><a href="#">Bailoterapia</a></li>
-                        <li><a href="#">Tareas asistidas</a></li>
-                        <li><a href="#">Estiramientos</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </nav>
-        
+        <div class="menu container">
+            <a href="index.html" class="logo">club Neurovida</a>
+            <input type="checkbox" id="menu" />
+            <label for="menu">
+                <img src="../images/menu-hamburguesa.png" class="menu-icono" alt="">
+            </label>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="citas.html">Agendar citas</a></li>
+                    <li><a href="quienes_somos.html">¿Quienes somos?</a></li>
+                    <li><a href="servicios.html">Servicios</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="header-content container">
+            <h1>Explora nuestros servicios</h1>
+            <p>Transformando vidas, impulsando bienestar integral.</p>
+        </div>
     </header>
 
-    <div class="hero"></div>
-    <div id="tareas" class="content"></div>
-        <h2>Tareas Asistidas</h2>
-        <p>En nuestra sección de <span class="highlight">Tareas Asistidas</span>, ofrecemos un amplio rango de servicios diseñados para ayudar a los estudiantes a alcanzar sus metas académicas y personales.</p>
-        <p>Los programas están diseñados para ser flexibles y adaptados a las necesidades individuales de cada estudiante, asegurando que cada uno pueda progresar a su propio ritmo.</p>
-        
-        <h3>Servicios Ofrecidos:</h3>
-        <ul>
-            <li>Asesoramiento personalizado en temas académicos.</li>
-            <li>Sesiones de estudio grupales.</li>
-            <li>Ayuda con la gestión del tiempo y técnicas de estudio.</li>
-            <li>Recursos educativos adicionales.</li>
-            <li>Apoyo emocional y motivacional.</li>
-        </ul>
-        <h3>Programas Disponibles:</h3>
-        <table>
-            <tr>
-                <th>Código</th>
-                <th>Descripción</th>
-                <th>Cantidad</th>
-                <th>Precio Unitario</th>
-                <th>Precio Total</th>
-            </tr>
-            <tr>
-                <td>123</td>
-                <td>hojas de papel</td>
-                <td>3</td>
-                <td>0.10$</td>
-                <td>0.30$</td>
-            </tr>
-            <tr>
-                <td>Gestión del Tiempo</td>
-                <td>Técnicas para optimizar el tiempo de estudio y trabajo.</td>
-                <td>2 semanas</td>
-                <td>$75</td>
-            </tr>
-            <tr>
-                <td>Clases de Reforzamiento</td>
-                <td>Refuerzo en asignaturas específicas según necesidades.</td>
-                <td>3 meses</td>
-                <td>$250</td>
-            </tr>
-        </table>
-        
-        <h3>Selecciona un Programa:</h3>
-        <select>
-            <option value="">Seleccione el material</option>
-            <option value="apoyo">Hojas de papel</option>
-            <option value="gestion">Lapiz</option>
-            <option value="refuerzo">Colores</option>
-        </select>
-        
-        <div class="footer">Para más información, contáctanos.</div>
+    <section class="hero w-full text-center py-20 slide-in">
+        <div class="hero-text">
+            <h1 class="text-5xl font-extrabold text-green-700">Agenda tu cita</h1>
+            <h2 class="text-3xl text-gray-800 mt-4">Neurovida</h2>
+        </div>
+    </section>
+
+    <div class="bg-gradient p-10 w-full"> <!-- Fondo degradado -->
+        <div class="text-center mb-8 slide-in">
+            <h1 class="text-5xl font-extrabold text-green-700">Ver Citas</h1>
+            <p class="text-gray-800 text-lg">Aquí puedes ver todas las citas agendadas.</p>
+        </div>
+
+        <div class="bg-white p-10 rounded-xl shadow-2xl float-right w-full max-w-lg slide-in"> <!-- Cuadro para agendar citas -->
+            <div class="flex justify-center mb-6">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOoP5nwla0jZ5jLUfs-GXoKEuLfV83DUqPOg&s" alt="Servicio de yoga" class="rounded-full shadow-lg" width="100" height="100">
+            </div>
+            <h2 class="text-4xl font-extrabold text-green-700 text-center mb-6">TAREAS DIRIGIDAS</h2>
+            <p class="text-gray-800 text-center mb-8">Relaja tu mente y cuerpo con nuestras clases de yoga.</p>
+
+            <div class="flex justify-between items-start">
+                <form id="appointment-form" class="w-full pr-4">
+                    <div class="mt-4">
+                        <label for="name" class="block text-gray-800 font-semibold mb-2">Nombre:</label>
+                        <input type="text" id="name" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500">
+                    </div>
+                    <div class="mt-4">
+                        <label for="surname" class="block text-gray-800 font-semibold mb-2">Apellido:</label>
+                        <input type="text" id="surname" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500">
+                    </div>
+                    <div class="mt-4">
+                        <label for="email" class="block text-gray-800 font-semibold mb-2">Email:</label>
+                        <input type="email" id="email" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500" placeholder="ejemplo@correo.com">
+                    </div>
+                    <div class="mt-4">
+                        <label for="phone" class="block text-gray-800 font-semibold mb-2">Número de teléfono:</label>
+                        <input type="tel" id="phone" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500" placeholder="Ej: 123-456-7890">
+                    </div>
+
+                    <div class="bg-gray-200 p-4 rounded-lg mt-4"> <!-- Fondo cuadrado -->
+                        <label for="select-day" class="block text-gray-800 font-semibold mb-3">Selecciona un día:</label>
+                        <select id="select-day" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500" onchange="showSchedule()">
+                            <option>--Seleccione un día--</option>
+                            <option>Lunes y Viernes (8:00 a 9:00)</option>
+                            <option>Lunes y Viernes (9:00 a 10:00)</option>
+                            <option>Martes y Sábado (8:00 a 9:00)</option>
+                            <option>Martes y Sábado (9:00 a 10:00)</option>
+                        </select>
+                    </div>
+
+                    <button type="button" id="book-button" class="btn-1 mt-6">Agendar cita</button>
+                    <p id="success-message" class="text-green-600 mt-4 hidden"></p>
+                    <p id="no-slots-message" class="text-red-600 mt-4 hidden">Lo siento, no hay cupo disponible.</p>
+                </form>
+            </div>
+        </div>
     </div>
+
+    <!-- Modal de confirmación -->
+    <div id="confirmationModal" class="modal">
+        <div class="modal-content">
+            <span id="close-modal" class="close">&times;</span>
+            <p class="text-gray-800">¿Confirmas la cita agendada?</p>
+            <button id="confirm-button" class="btn-1 mt-4">Confirmar</button>
+            <button id="cancel-button" class="btn-1 mt-4">Cancelar</button> <!-- Botón Cancelar -->
+        </div>
+    </div>
+
     <script>
-        function showContent(contentId) {
-            // Ocultar todos los contenidos
-            var contents = document.querySelectorAll('.content');
-            contents.forEach(function(content) {
-                content.style.display = 'none';
-            });
-            // Mostrar el contenido seleccionado
-            document.getElementById(contentId).style.display = 'block';
+        const successMessage = document.getElementById("success-message");
+        const noSlotsMessage = document.getElementById("no-slots-message");
+        const confirmationModal = document.getElementById("confirmationModal");
+        const closeModal = document.getElementById("close-modal");
+        const cancelButton = document.getElementById("cancel-button");
+
+        function showSchedule() {
+            successMessage.classList.add("hidden");
+            noSlotsMessage.classList.add("hidden");
         }
 
-        function resetPage() {
-            // Mostrar el contenido de Inicio y ocultar otros
-            var contents = document.querySelectorAll('.content');
-            contents.forEach(function(content) {
-                content.style.display = 'none';
-            });
-            document.getElementById('inicio').style.display = 'block';
+        function openModal() {
+            confirmationModal.style.display = "block";
         }
+
+        function closeModalFunction() {
+            confirmationModal.style.display = "none";
+            // Restablecer campos
+            document.getElementById("name").value = '';
+            document.getElementById("surname").value = '';
+            document.getElementById("email").value = '';
+            document.getElementById("phone").value = '';
+            selectDay.selectedIndex = 0;
+            successMessage.classList.add("hidden");
+            noSlotsMessage.classList.add("hidden");
+        }
+
+        closeModal.onclick = closeModalFunction;
+
+        document.getElementById("book-button").onclick = () => {
+            openModal();
+        };
+
+        // Acción del botón Confirmar
+        document.getElementById("confirm-button").onclick = () => {
+            successMessage.classList.remove("hidden");
+            successMessage.textContent = "¡Cita agendada exitosamente!";
+            closeModalFunction();
+        };
+
+        // Acción del botón Cancelar
+        cancelButton.onclick = () => {
+            closeModalFunction();
+        };
+
+        window.onclick = function (event) {
+            if (event.target === confirmationModal) {
+                closeModalFunction();
+            }
+        };
     </script>
 </body>
 </html>
