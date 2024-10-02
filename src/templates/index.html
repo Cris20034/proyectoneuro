@@ -1,36 +1,208 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible"content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}{% endblock %}</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style/index.css') }}">
+    <title>Neurovida</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="shortcut icon" href="../images/favicon-32x32.png"image/x-icon">
 </head>
 <body>
-    <header class="navbar">
-        <div class="nav-left">
-            <div class="logo">
-                <a href="/">
-                    <img style="width: 100px; height: 50px;" src="{{ url_for('static', filename='img/logo.png') }}" alt="Google Cloud Skills Boost">
-                </a>
-            </div>
+    <header class="header">
+        <div class="menu container">
+            <a href="index.html" class="logo">Club Neurovida</a>
+            <input type="checkbox"  id="menu" />
+            <label for="menu">
+                <img src="../images/menu-hamburguesa.png" class="menu-icono" alt="">
+            </label>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="citas.html">Agendar citas</a></li>
+                    <li><a href="quienes_somos.html">¿Quienes somos?</a></li>
+                    <li><a href="servicios.html">Servicios</a></li>
+
+                </ul>
+            </nav>
         </div>
-        <div class="nav-center">
-            <a href="/rutas" class="nav-tab active">Rutas</a>
-            <a href="/" class="nav-tab">Explorar</a>
-            <a href="/subscription" class="nav-tab">Suscripciones</a>
-        </div>
-        <div class="nav-right">
-            <a href="/login" class="btn login-btn">Acceder</a>
-            <a href="/register" class="btn signup-btn">Unirse</a>
+
+        <div class="header-content container">
+            <h1> Club neurovida</h1>
+            <p>Transformando vidas, impulsando bienestar integral.
+            </p>
+            <a href="servicios.html" class="btn-1"> Agendar Cita</a>
         </div>
     </header>
-    <div class="cabecera">
 
-        <p>Gestión  Empresas</p>
-    
+
+
+    <section class="frase">
+        <img class="frase-img" src="../images/cerbro.png">
+
+        <div class="frase-content container">
+            <h2>Lorem, ipsum dolor.</h2>
+            <p class="txt-p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi aut natus, rerum praesentium nobis ut deserunt voluptatum eligendi libero omnis neque provident, quasi perspiciatis mollitia earum cupiditate labore! Repellendus, dolorem.
+            </p>
+            <div class="coffe-group">
+                <div class="coffe-2">
+                    <img src="../images/cursos de computacion.jpg" alt="">
+                    <h3> Lorem, ipsum dolor.</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, architecto dolorem. Doloremque, rem similique quo dicta, molestiae quae quia dolor porro laboriosam veritatis nihil aut nam modi ut perspiciatis esse.
+                    </p>
+                </div>
+                <div class="coffe-1">
+                    <img src="../images/gimnasia.png" alt="">
+                    <h3> Lorem, ipsum dolor.</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, architecto dolorem. Doloremque, rem similique quo dicta, molestiae quae quia dolor porro laboriosam veritatis nihil aut nam modi ut perspiciatis esse.
+                    </p>
+                </div>
+                <div class="coffe-1">
+                    <img src="../images/masajes.jpg" alt="">
+                    <h3> Lorem, ipsum dolor.</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, architecto dolorem. Doloremque, rem similique quo dicta, molestiae quae quia dolor porro laboriosam veritatis nihil aut nam modi ut perspiciatis esse.
+                    </p>
+                </div>
+            </div>
+            <a href="citas.html" class="btn-1">Agendar cita</a>
         </div>
+    </section>
 
-    {% block content %}{% endblock %}
+
+    <main class="servicios">
+        <div class="servicios-content container">
+            <h2> Nuestros Servicios </h2>
+
+            <div class="servicios-group">
+                <div class="servicio-1">
+                    <img src="../images/manualidades.jpg" alt="">
+                    <h3>Servicio 1 </h3>
+                </div>
+                <div class="servicio-1">
+                    <img src="../images/tareas dirigidas.jpg" alt="">
+                    <h3>Servicio 2</h3>
+                </div>
+                <div class="servicio-1">
+                    <img src="../images/gimnasia.png" alt="">
+                    <h3>Servicio 3</h3>
+                </div>
+            </div>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae odio ab voluptatum incidunt, voluptas repellendus animi labore rerum sunt vitae asperiores quidem? Quia placeat praesentium veniam in officia velit dignissimos.
+            </p>
+            <a href="citas.html" class="btn-1">Agendar cita</a>
+        </div>
+    </main>
+
+
+    <section class="general">
+        <div class=" general-1">
+            <h2>Lorem, ipsum dolor.</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident esse dolor dolore iure suscipit aliquam. Veniam, excepturi quam quos beatae porro accusantium provident debitis reiciendis itaque laboriosam, voluptatibus ex illo?</p>
+            <a href="citas.html" class="btn-1"> Agendar citas</a>
+        </div>
+        <div class="general-2"></div>
+    </section>
+
+    <section class="general">
+        <div class="general-3"></div>
+        <div class=" general-1">
+            <h2>Lorem, ipsum dolor.</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident esse dolor dolore iure suscipit aliquam. Veniam, excepturi quam quos beatae porro accusantium provident debitis reiciendis itaque laboriosam, voluptatibus ex illo?</p>
+            <a href="citas.html" class="btn-1"> Agendar citas</a>
+        </div>
+    </section>
+
+
+    <section class="blog container">
+        <h2>Blog</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <div class="blog-content">
+            <div class="blog-1">
+            <img src="../images/images.jpg" alt="">
+            <h3>Blog 1</h3>
+            <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio dicta, quidem quae mollitia dolorum sit accusamus ab expedita fuga odit nam nisi earum? Veritatis, quibusdam magnam pariatur optio culpa iure!
+            </p>
+            </div>
+            <div class="blog-1">
+                <img src="../images/images.jpg" alt="">
+                <h3>Blog 2</h3>
+                <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio dicta, quidem quae mollitia dolorum sit accusamus ab expedita fuga odit nam nisi earum? Veritatis, quibusdam magnam pariatur optio culpa iure!
+                </p>
+            </div>
+            <div class="blog-1">
+                <img src="../images/images.jpg" alt="">
+                <h3>Blog 3</h3>
+                <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio dicta, quidem quae mollitia dolorum sit accusamus ab expedita fuga odit nam nisi earum? Veritatis, quibusdam magnam pariatur optio culpa iure!
+                </p>
+            </div>
+        </div>
+        <a href="citas.html" class="btn-1"> Agendar cita</a>
+    </section>
+
+    <section class="rating-section">
+        <h2>Deja tu Calificación</h2>
+        <div class="star-rating">
+            <input type="radio" id="star5" name="rating" value="5"><label for="star5">&#9733;</label>
+            <input type="radio" id="star4" name="rating" value="4"><label for="star4">&#9733;</label>
+            <input type="radio" id="star3" name="rating" value="3"><label for="star3">&#9733;</label>
+            <input type="radio" id="star2" name="rating" value="2"><label for="star2">&#9733;</label>
+            <input type="radio" id="star1" name="rating" value="1"><label for="star1">&#9733;</label>
+        </div>
+        <textarea id="testimonial" class="testimonial-input" placeholder="Escribe tu testimonio aquí..."></textarea>
+        <button class="btn-submit" onclick="submitTestimonial()">Enviar</button>
+    </section>
+
+    <!-- Sección de Testimonios -->
+    <section class="testimonials-section">
+        <h2>Testimonios</h2>
+        <div id="testimonial-list"></div>
+    </section>
+
+            
+    <footer class="footer">
+        <div class="footer-content container">
+            <div class="link">
+                <h3>Lorem ipsum dolor .</h3>
+                <ul>
+                    <li><a href="">facebook</a></li>
+                    <li><a href="">facebook</a></li>
+                    <li><a href="">facebook</a></li>
+                    <li><a href="">facebook</a></li>
+                </ul>
+            </div>
+            <div class="link">
+                <h3>Lorem ipsum dolor .</h3>
+                <ul>
+                    <li><a href="">facebook</a></li>
+                    <li><a href="">facebook</a></li>
+                    <li><a href="">facebook</a></li>
+                    <li><a href="">facebook</a></li>
+                </ul>
+            </div>
+            <div class="link">
+                <h3>Lorem ipsum dolor .</h3>
+                <ul>
+                    <li><a href="">facebook</a></li>
+                    <li><a href="">facebook</a></li>
+                    <li><a href="">facebook</a></li>
+                    <li><a href="">facebook</a></li>
+                </ul>
+            </div>
+            <div class="link">
+                <h3>Lorem ipsum dolor .</h3>
+                <ul>
+                    <li><a href="">facebook</a></li>
+                    <li><a href="">facebook</a></li>
+                    <li><a href="">facebook</a></li>
+                    <li><a href="">facebook</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <script src="../js/script.js"></script>
 </body>
 </html>
