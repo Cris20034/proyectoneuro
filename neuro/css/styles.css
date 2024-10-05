@@ -29,7 +29,6 @@ body{
         min-height: 70vh;
         display: flex;
         align-items: center;
-        clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 100%, 0 80%);
 }
 .menu{
     position: absolute;
