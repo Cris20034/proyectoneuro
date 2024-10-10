@@ -7,7 +7,7 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8">
+<meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ClubNeurovida</title>
@@ -16,17 +16,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Breve descripción del contenido para SEO -->
-    <meta name="description" content="Find the best computers, accessories, toys, and international products on our store.">
+    <meta name="description" content="El Centro NeuroVida tiene como misión 
+    transformar y reconstruir el desarrollo integral 
+    de los miembros de la familia">
 
     <!-- Palabras clave que ayudan al SEO -->
-    <meta name="keywords" content="computers, accessories, toys, international, bestsellers, shopping">
+    <meta name="keywords" content="Tulcan,NeuroVida, bienestar, neurociencia, 
+    salud mental, Tulcán, desarrollo cognitivo, educación financiera, 
+    emprendimiento, sostenibilidad, gimnasia cerebral, yoga prenatal, 
+    tareas dirigidas, acompañamiento de doulas, robótica, programación,
+    nutrición, fisioterapia, inclusividad, responsabilidad social, resiliencia">
 
 
     <!-- Información de Open Graph para redes sociales -->
-    <meta property="og:title" content="Neurovida, ">
-    <meta property="og:description" content="We offer a wide range of products, including computers, toys, and international bestsellers.">
-    <meta property="og:image" content="./neuro/images/imagen portada.jpg">
+    <meta property="og:title" content="NeuroVida - Centro Integral para el Bienestar Cognitivo y Emocional">
+    <meta property="og:description" content="NeuroVida es el primer centro en Tulcán que
+     ofrece servicios enfocados en el bienestar integral familiar, combinando neurociencia,
+      salud mental, y educación financiera. ¡Mejora tu calidad de vida con nosotros!">
+    <meta property="og:image" content="./neuro/images/cerbro.png">
     <meta property="og:url" content="https://clubneurovida-com.preview-domain.com/">
+
 
 </head>
 
