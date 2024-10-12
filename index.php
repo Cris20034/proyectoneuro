@@ -462,7 +462,7 @@
         .servicios {
             background-image: linear-gradient(rgba(0, 0, 0, 0.7),
                     rgba(0, 0, 0, 0.7)),
-                url(../images/yoga.jpg);
+                url(./neuro/images/yoga.jpg);
             background-position: center bottom;
             background-repeat: no-repeat;
             background-size: cover;
