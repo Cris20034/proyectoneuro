@@ -7,7 +7,7 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8">
+<meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ClubNeurovida</title>
@@ -16,17 +16,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Breve descripción del contenido para SEO -->
-    <meta name="description" content="Find the best computers, accessories, toys, and international products on our store.">
+    <meta name="description" content="El Centro NeuroVida tiene como misión 
+    transformar y reconstruir el desarrollo integral 
+    de los miembros de la familia">
 
     <!-- Palabras clave que ayudan al SEO -->
-    <meta name="keywords" content="computers, accessories, toys, international, bestsellers, shopping">
+    <meta name="keywords" content="Tulcan,NeuroVida, bienestar, neurociencia, 
+    salud mental, Tulcán, desarrollo cognitivo, educación financiera, 
+    emprendimiento, sostenibilidad, gimnasia cerebral, yoga prenatal, 
+    tareas dirigidas, acompañamiento de doulas, robótica, programación,
+    nutrición, fisioterapia, inclusividad, responsabilidad social, resiliencia">
 
 
     <!-- Información de Open Graph para redes sociales -->
-    <meta property="og:title" content="Neurovida, ">
-    <meta property="og:description" content="We offer a wide range of products, including computers, toys, and international bestsellers.">
-    <meta property="og:image" content="./neuro/images/imagen portada.jpg">
+    <meta property="og:title" content="NeuroVida - Centro Integral para el Bienestar Cognitivo y Emocional">
+    <meta property="og:description" content="NeuroVida es el primer centro en Tulcán que
+     ofrece servicios enfocados en el bienestar integral familiar, combinando neurociencia,
+      salud mental, y educación financiera. ¡Mejora tu calidad de vida con nosotros!">
+    <meta property="og:image" content="./neuro/images/cerbro.png">
     <meta property="og:url" content="https://clubneurovida-com.preview-domain.com/">
+
 
 </head>
 
@@ -37,7 +46,7 @@
             <a href="index.php" class="logo">Club Neurovida</a>
             <input type="checkbox" id="menu" />
             <label for="menu">
-                <img src="./neuro/images/menu-hamburguesa.png" class="menu-icono" alt="">
+                <img src="./neuro/images/menu_hamburguesa.png" class="menu-icono" alt="">
 
             </label>
             <nav class="navbar">
@@ -84,9 +93,9 @@
                 <div class="coffe-1">
                     <img src="./neuro/images/acompañamiento de doulas.jpg" alt="">
                     <h3> Acompañamiento de doulas.</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                        Quidem, architecto dolorem. Doloremque, rem similique quo 
-                        dicta, molestiae quae quia dolor porro laboriosam veritatis 
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Quidem, architecto dolorem. Doloremque, rem similique quo
+                        dicta, molestiae quae quia dolor porro laboriosam veritatis
                         nihil aut nam modi ut perspiciatis esse.
                     </p>
                 </div>
@@ -116,9 +125,9 @@
             </div>
             <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                 Quae odio ab voluptatum incidunt, voluptas repellendus 
-                 animi labore rerum sunt vitae asperiores quidem? Quia
-                  placeat praesentium veniam in officia velit dignissimos.
+                Quae odio ab voluptatum incidunt, voluptas repellendus
+                animi labore rerum sunt vitae asperiores quidem? Quia
+                placeat praesentium veniam in officia velit dignissimos.
             </p>
             <a href="citas.html" class="btn-1">Agendar cita</a>
         </div>
@@ -128,7 +137,7 @@
     <section class="general">
         <div class=" general-1">
             <h2>Lorem, ipsum dolor.</h2>
-            
+
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.
                 Provident esse dolor dolore iure suscipit aliquam. Veniam,
                 excepturi quam quos beatae porro accusantium provident debitis
@@ -142,10 +151,10 @@
         <div class="general-3"></div>
         <div class=" general-1">
             <h2>Lorem, ipsum dolor.</h2>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident 
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident
                 esse dolor dolore iure suscipit aliquam. Veniam, excepturi quam quos
-                 beatae porro accusantium provident debitis reiciendis itaque laboriosam, 
-                 voluptatibus ex illo?</p>
+                beatae porro accusantium provident debitis reiciendis itaque laboriosam,
+                voluptatibus ex illo?</p>
             <a href="citas.html" class="btn-1"> Agendar citas</a>
         </div>
     </section>
@@ -160,9 +169,9 @@
                 <h3>Blog 1</h3>
                 <p>
                     Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                     Distinctio dicta, quidem quae mollitia dolorum sit accusamus
-                      ab expedita fuga odit nam nisi earum? Veritatis, quibusdam 
-                      magnam pariatur optio culpa iure!
+                    Distinctio dicta, quidem quae mollitia dolorum sit accusamus
+                    ab expedita fuga odit nam nisi earum? Veritatis, quibusdam
+                    magnam pariatur optio culpa iure!
                 </p>
             </div>
             <div class="blog-1">
@@ -170,9 +179,9 @@
                 <h3>Blog 2</h3>
                 <p>
                     Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                     Distinctio dicta, quidem quae mollitia dolorum sit accusamus 
-                     ab expedita fuga odit nam nisi earum? Veritatis, quibusdam 
-                     magnam pariatur optio culpa iure!
+                    Distinctio dicta, quidem quae mollitia dolorum sit accusamus
+                    ab expedita fuga odit nam nisi earum? Veritatis, quibusdam
+                    magnam pariatur optio culpa iure!
                 </p>
             </div>
             <div class="blog-1">
@@ -180,9 +189,9 @@
                 <h3>Blog 3</h3>
                 <p>
                     Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                     Distinctio dicta, quidem quae mollitia dolorum sit 
-                     accusamus ab expedita fuga odit nam nisi earum? Veritatis, 
-                     quibusdam magnam pariatur optio culpa iure!
+                    Distinctio dicta, quidem quae mollitia dolorum sit
+                    accusamus ab expedita fuga odit nam nisi earum? Veritatis,
+                    quibusdam magnam pariatur optio culpa iure!
                 </p>
             </div>
         </div>
@@ -265,8 +274,8 @@
         }
 
         .header {
-            background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
-            url(./neuro/images/imagen\ portada.jpg);
+            background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+                url(./neuro/images/imagen\ portada.jpg);
             background-position: center bottom;
             background-repeat: no-repeat;
             background-size: cover;
@@ -954,7 +963,7 @@
         }
     </style>
 
-    <script src="../js/script.js"></script>
+    <script src="./neuro/js/script.js"></script>
 </body>
 
 </html>
