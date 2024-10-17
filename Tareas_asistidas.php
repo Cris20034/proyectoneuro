@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ventas - Sistema Inventarios</title>
+    <title>Tareas Asistidas</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="estilos.css">
 </head>
@@ -18,7 +18,7 @@
             <form>
                 <div class="row g-3">
                     <div class="col-md-4">
-                        <label for="saleId" class="form-label">ID de Venta</label>
+                        <label for="saleId" class="form-label">ID Producto</label>
                         <input type="text" class="form-control" id="saleId">
                     </div>
                     <div class="col-md-4">
@@ -59,7 +59,7 @@
             <table class="table table-striped">
                 <thead>
                     <tr>
-                        <th>ID de Venta</th>
+                        <th>ID Producto</th>
                         <th>Fecha de Venta</th>
                         <th>Cliente</th>
                         <th>Total</th>
