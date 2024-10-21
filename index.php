@@ -1,6 +1,5 @@
 <?php
 // index.php
-
 ?>
 
 <!DOCTYPE html>
@@ -11,7 +10,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ClubNeurovida</title>
-    <link rel="shortcut icon" href="./neuro/images/favicon-32x32.png" type="image/x-icon">
+    <link rel="shortcut icon" href="./neuro/images/favicon.png" type="image/x-icon">
     <!-- Optimiza la vista en móviles -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -43,7 +42,7 @@
 <body>
     <header class="header">
         <div class="menu container">
-            <a href="index.php" class="logo">Club Neurovida</a>
+            <a href="index.php" class="logo"><img src="./neuro/images/favicon.png" alt=""></a>
             <input type="checkbox" id="menu" />
             <label for="menu">
                 <img src="./neuro/images/menu_hamburguesa.png" class="menu-icono" alt="">
@@ -52,7 +51,7 @@
             <nav class="navbar">
                 <ul>
                     <li><a href="./index.php">Home</a></li>
-                    <li><a href="./quienes_somos.php">¿Quienes somos?</a></li>
+                    <li><a href="quienes_somos.php">¿Quienes somos?</a></li>
                     <li><a href="./contactanos.php">Contactanos</a></li>
                     <li><a href="./servicios.php">Servicios</a></li>
                 </ul>
