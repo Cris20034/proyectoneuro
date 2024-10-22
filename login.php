@@ -12,23 +12,7 @@
       <div class="login-header">
         <img src="./neuro/images/contrasena.png" alt="User Icon" class="user-icon">
       </div>
-      <!--  
-      <form action="login.php" method="GET">
-        <div class="input-group">
-          <input type="email" name="email" placeholder="Email" required>
-        </div>
-        <div class="input-group">
-          <input type="password" name="password" placeholder="Password" required>
-        </div>
-        
-        <div class="options">
-          <button  action="index.php" type="submit" class="login-btn">Register</button>
-        </div>
-
-        <button href="index.php" type="submit" class="login-btn">LOGIN</button>
-      </form>
-   \-->
-      <form action="login.php" method="post">
+      <form action="validar.php" method="post">
         <h1>Login</h1>
         <div class="input-group">
           <input type="email" name="email" placeholder="Email" required>
@@ -37,22 +21,15 @@
           <input type="password" name="password" id="password" placeholder="password" required>
         </div>
         <section>
-          <button class="login-btn" type="submit">Login</button>
+          <button name="btningresar" class="login-btn" type="submit">Login</button>
           <a href="register.php">Register</a>
         </section>
       </form>
-
-
-
-
-
-
-
-
-
-
     </div>
   </div>
+
+
+  
   <style>
     /* General Styles */
     body {
