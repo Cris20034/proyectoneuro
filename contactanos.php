@@ -13,7 +13,7 @@
 <body>
     <header class="header">
         <div class="menu container">
-            <a href="index.php" class="logo">Club Neurovida</a>
+            <a href="index.php" class="logo"><img src="./neuro/images/favicon.png" alt=""></a>
             <input type="checkbox"  id="menu"/>
             <label for="menu">
                 <img src="../images/menu-hamburguesa.png" class="menu-icono" alt="">
