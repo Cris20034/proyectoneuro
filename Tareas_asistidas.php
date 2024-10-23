@@ -8,7 +8,6 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="estilos.css">
 </head>
-
 <body>
     <div class="container mt-4">
         <h2 class="mb-4">Tareas Asistidas</h2>
@@ -52,7 +51,6 @@
                 </div>
             </form>
         </div>
-
         <!-- Tabla de Ventas -->
         <div class="mb-4">
             <h4>Lista de Ventas</h4>
@@ -93,7 +91,6 @@
                 </tbody>
             </table>
         </div>
-
         <!-- Modal para Ver Detalles de la Venta -->
         <div class="modal fade" id="viewSaleModal" tabindex="-1" aria-labelledby="viewSaleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-lg">
@@ -135,7 +132,6 @@
             </div>
         </div>
     </div>
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
