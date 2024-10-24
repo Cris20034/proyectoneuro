@@ -48,10 +48,11 @@
                 <img src="./neuro/images/menu_hamburguesa.png" class="menu-icono" alt="">
 
             </label>
-
             <div>
+                <!-- IMPORTANTE, se puede cambiar por botones, pero el href se debe hacer referencia al mismo -->
             <a href="find-result.php" class="btn btn-primary py-2 px-4 d-none d-lg-block">Estudiantes</a>
-            <a href="admin-login.php" class="btn btn-primary py-2 px-4 d-none d-lg-block">Admin</a>
+            <a href="admin-login.php" class="btn btn-primary py-2 px-4 d-none d-lg-block">Admin</a>d
+
             </div>
             <nav class="navbar">
                 <ul>
